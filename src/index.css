@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #F9F1DC;
+  --color-cream-light: #FFFBF2;
+  --color-terracotta: #B87A5E;
+  --color-terracotta-dark: #8C533A;
+  --color-gold: #D0A769;
+  --color-gold-light: #E7C993;
+  --color-ivory: #FFFBF2;
+  --color-charcoal: #211F1F;
+  --color-charcoal-dark: #171515;
+  --color-brand-brown: #4A2B20;
+
+  --font-cormorant: 'Cormorant Garamond', serif;
+  --font-dmserif: 'DM Serif Display', serif;
+  --font-montserrat: 'Montserrat', sans-serif;
+  --font-script: 'Alex Brush', 'Playfair Display', cursive;
+}
+
+@layer utilities {
+  .font-cormorant {
+    font-family: var(--font-cormorant);
+  }
+  .font-dmserif {
+    font-family: var(--font-dmserif);
+  }
+  .font-montserrat {
+    font-family: var(--font-montserrat);
+  }
+  .font-script {
+    font-family: var(--font-script);
+  }
+}
+
+/* Custom background patterns and arches matching design PDF */
+.bg-qatar-pattern {
+  background-color: #F9F1DC;
+  background-image: radial-gradient(#D0A769 0.75px, transparent 0.75px);
+  background-size: 24px 24px;
+}
+
+.arch-card-top {
+  border-top-left-radius: 120px;
+  border-top-right-radius: 120px;
+}
+
+.arch-hero-frame {
+  border-radius: 180px 180px 0 0;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
