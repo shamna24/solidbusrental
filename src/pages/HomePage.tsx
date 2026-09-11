@@ -258,22 +258,49 @@ export const HomePage: React.FC<HomePageProps> = ({ setActivePage, onOpenBooking
 
 
       {/* 4. SCHOOL TRANSPORTATION SECTION matching Page 4 design */}
-      <section className="py-12 lg:py-16 border-t border-[#D0A769]/30 max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-16">
+      <section className="py-8 lg:py-12 border-t border-[#D0A769]/30 max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-16 overflow-hidden">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           
-          {/* Left School Bus Image with built-in Dome Arch & Maroon Outline matching Image 1 */}
-          <div className="lg:col-span-5 flex justify-center lg:justify-start">
-            <div className="w-full relative group">
-              <img
-                src="/home_assets/school_bus_children.png"
-                alt="Safe School Transportation Qatar"
-                className="w-full h-auto max-h-[380px] sm:max-h-[440px] lg:max-h-[480px] object-contain object-left-top filter drop-shadow-[0_12px_24px_rgba(74,26,16,0.12)] transition-transform duration-500 group-hover:scale-[1.01]"
-              />
+          {/* Left School Bus Image enlarged into top & left region with vector Maroon Arch Border matching Image 1 */}
+          <div className="lg:col-span-6 xl:col-span-6 flex justify-center lg:justify-start -mt-4 lg:-mt-8 -ml-4 sm:-ml-8 lg:-ml-12 xl:-ml-16">
+            <div className="w-full max-w-[720px] lg:max-w-none group relative">
+              <svg
+                className="w-full h-auto drop-shadow-[0_16px_32px_rgba(74,26,16,0.16)] transition-transform duration-500 group-hover:scale-[1.01]"
+                viewBox="0 0 418 215"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <defs>
+                  <clipPath id="schoolBusVectorClip">
+                    <path d="M 0,0 L 295,0 C 370,0 418,35 418,107.5 C 418,180 350,212 240,212 C 150,212 60,208 0,214 Z" />
+                  </clipPath>
+                </defs>
+
+                {/* High-Definition 2X Photo clipped by vector path */}
+                <image
+                  href="/home_assets/school_bus_hd_clean.png"
+                  x="0"
+                  y="0"
+                  width="418"
+                  height="215"
+                  preserveAspectRatio="xMinYMin slice"
+                  clipPath="url(#schoolBusVectorClip)"
+                />
+
+                {/* Ultra-Sharp Crisp Vector Maroon Border Stroke (#5C1D18) */}
+                <path
+                  d="M 295,0 C 370,0 418,35 418,107.5 C 418,180 350,212 240,212 C 150,212 60,208 0,214"
+                  fill="none"
+                  stroke="#5C1D18"
+                  strokeWidth="5"
+                  strokeLinecap="round"
+                />
+              </svg>
             </div>
           </div>
 
           {/* Right Content & 4 Icon Columns matching Image 1 */}
-          <div className="lg:col-span-7 space-y-6">
+          <div className="lg:col-span-6 xl:col-span-6 space-y-6 pt-4 lg:pt-0">
             
             <div className="space-y-2">
               <span className="text-xs sm:text-sm font-extrabold tracking-widest text-[#5C1D18] uppercase block">
