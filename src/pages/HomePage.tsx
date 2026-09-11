@@ -258,28 +258,28 @@ export const HomePage: React.FC<HomePageProps> = ({ setActivePage, onOpenBooking
 
 
       {/* 4. SCHOOL TRANSPORTATION SECTION matching Page 4 design */}
-      <section className="py-16 border-t border-[#D0A769]/30 max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-16">
+      <section className="py-12 lg:py-16 border-t border-[#D0A769]/30 max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-16">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           
-          {/* Left School Bus Image in Pristine Geometric Arch Frame matching Image 2 */}
+          {/* Left School Bus Image with built-in Dome Arch & Maroon Outline matching Image 1 */}
           <div className="lg:col-span-5 flex justify-center lg:justify-start">
-            <div className="w-full rounded-r-[180px] sm:rounded-r-[220px] rounded-l-2xl overflow-hidden shadow-2xl border-[5px] border-[#4A1A10] bg-[#FFFBF2]">
+            <div className="w-full relative group">
               <img
-                src="/home_assets/school_bus_children.jpg"
+                src="/home_assets/school_bus_children.png"
                 alt="Safe School Transportation Qatar"
-                className="w-full h-[320px] sm:h-[380px] lg:h-[420px] object-cover object-left"
+                className="w-full h-auto max-h-[380px] sm:max-h-[440px] lg:max-h-[480px] object-contain object-left-top filter drop-shadow-[0_12px_24px_rgba(74,26,16,0.12)] transition-transform duration-500 group-hover:scale-[1.01]"
               />
             </div>
           </div>
 
-          {/* Right Content & 4 Icon Columns */}
+          {/* Right Content & 4 Icon Columns matching Image 1 */}
           <div className="lg:col-span-7 space-y-6">
             
             <div className="space-y-2">
-              <span className="text-xs sm:text-sm font-extrabold tracking-widest text-[#B87A5E] uppercase block">
+              <span className="text-xs sm:text-sm font-extrabold tracking-widest text-[#5C1D18] uppercase block">
                 SCHOOL TRANSPORTATION
               </span>
-              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-cormorant font-bold text-[#4A1A10] leading-tight">
+              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-cormorant font-bold text-[#3A1B14] leading-tight tracking-tight">
                 Safe Journeys Start Here.
               </h2>
               <p className="text-sm sm:text-base lg:text-lg text-[#3A2A20] font-light leading-relaxed max-w-xl">
@@ -287,42 +287,42 @@ export const HomePage: React.FC<HomePageProps> = ({ setActivePage, onOpenBooking
               </p>
             </div>
 
-            {/* 4 Feature Columns matching Page 4 icons and vertical dividers */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-0 pt-6 border-t border-[#D0A769]/30 text-center divide-x divide-[#D0A769]/30">
+            {/* 4 Feature Columns matching Image 1 icons and vertical dividers */}
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-0 pt-6 border-t border-[#D0A769]/30 text-center divide-x divide-[#D0A769]/40">
               
               {/* Safety First */}
-              <div className="px-3 space-y-2">
-                <div className="w-14 h-14 rounded-full bg-[#FFF9EF] border-2 border-[#D0A769]/50 shadow-sm flex items-center justify-center mx-auto ring-4 ring-[#4A1A10]/5">
-                  <ShieldCheck className="w-7 h-7 text-[#4A1A10]" />
+              <div className="px-2 sm:px-3 space-y-2">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#FAF0DC] border border-[#5C1D18]/30 shadow-xs flex items-center justify-center mx-auto">
+                  <ShieldCheck className="w-6 h-6 sm:w-7 sm:h-7 text-[#5C1D18]" />
                 </div>
-                <h4 className="font-bold text-xs sm:text-sm text-[#4A1A10]">Safety First</h4>
+                <h4 className="font-bold text-xs sm:text-sm text-[#3A1B14]">Safety First</h4>
                 <p className="text-[10px] sm:text-xs text-[#3A2A20]/80 font-light leading-tight">Safety-focused operations.</p>
               </div>
 
               {/* Comfort Assured */}
-              <div className="px-3 space-y-2">
-                <div className="w-14 h-14 rounded-full bg-[#FFF9EF] border-2 border-[#D0A769]/50 shadow-sm flex items-center justify-center mx-auto ring-4 ring-[#4A1A10]/5">
-                  <Bus className="w-7 h-7 text-[#4A1A10]" />
+              <div className="px-2 sm:px-3 space-y-2">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#FAF0DC] border border-[#5C1D18]/30 shadow-xs flex items-center justify-center mx-auto">
+                  <Bus className="w-6 h-6 sm:w-7 sm:h-7 text-[#5C1D18]" />
                 </div>
-                <h4 className="font-bold text-xs sm:text-sm text-[#4A1A10]">Comfort Assured</h4>
+                <h4 className="font-bold text-xs sm:text-sm text-[#3A1B14]">Comfort Assured</h4>
                 <p className="text-[10px] sm:text-xs text-[#3A2A20]/80 font-light leading-tight">Air-conditioned & comfortable buses.</p>
               </div>
 
               {/* On-Time Every Day */}
-              <div className="px-3 space-y-2">
-                <div className="w-14 h-14 rounded-full bg-[#FFF9EF] border-2 border-[#D0A769]/50 shadow-sm flex items-center justify-center mx-auto ring-4 ring-[#4A1A10]/5">
-                  <Timer className="w-7 h-7 text-[#4A1A10]" />
+              <div className="px-2 sm:px-3 space-y-2">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#FAF0DC] border border-[#5C1D18]/30 shadow-xs flex items-center justify-center mx-auto">
+                  <Timer className="w-6 h-6 sm:w-7 sm:h-7 text-[#5C1D18]" />
                 </div>
-                <h4 className="font-bold text-xs sm:text-sm text-[#4A1A10]">On-Time Every Day</h4>
+                <h4 className="font-bold text-xs sm:text-sm text-[#3A1B14]">On-Time Every Day</h4>
                 <p className="text-[10px] sm:text-xs text-[#3A2A20]/80 font-light leading-tight">Reliable transport for every schedule.</p>
               </div>
 
               {/* Trusted By Schools */}
-              <div className="px-3 space-y-2">
-                <div className="w-14 h-14 rounded-full bg-[#FFF9EF] border-2 border-[#D0A769]/50 shadow-sm flex items-center justify-center mx-auto ring-4 ring-[#4A1A10]/5">
-                  <Users className="w-7 h-7 text-[#4A1A10]" />
+              <div className="px-2 sm:px-3 space-y-2">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#FAF0DC] border border-[#5C1D18]/30 shadow-xs flex items-center justify-center mx-auto">
+                  <Users className="w-6 h-6 sm:w-7 sm:h-7 text-[#5C1D18]" />
                 </div>
-                <h4 className="font-bold text-xs sm:text-sm text-[#4A1A10]">Trusted By Schools</h4>
+                <h4 className="font-bold text-xs sm:text-sm text-[#3A1B14]">Trusted By Schools</h4>
                 <p className="text-[10px] sm:text-xs text-[#3A2A20]/80 font-light leading-tight">Professional service you can rely on.</p>
               </div>
 
