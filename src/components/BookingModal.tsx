@@ -243,7 +243,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose, pre
             </div>
 
             <p className="text-[11px] text-[#211F1F]/60">
-              For urgent inquiries, call our 24/7 Qatar line: <strong className="text-[#B87A5E]">+974 4476 2662</strong>
+              For urgent inquiries, call our 24/7 Qatar line: <strong className="text-[#B87A5E]">+974 5084 2662</strong>
             </p>
 
             <button

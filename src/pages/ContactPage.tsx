@@ -50,8 +50,8 @@ export const ContactPage: React.FC = () => {
               </div>
               <div>
                 <span className="text-[10px] font-extrabold tracking-widest text-[#211F1F]/60 uppercase block">PHONE</span>
-                <a href="tel:+97444762662" className="text-base font-bold text-[#4A1A10] hover:text-[#B87A5E] transition-colors">
-                  +974 4476 2662
+                <a href="tel:+97450842662" className="text-base font-bold text-[#4A1A10] hover:text-[#B87A5E] transition-colors">
+                  +974 5084 2662
                 </a>
               </div>
             </div>
@@ -106,11 +106,11 @@ export const ContactPage: React.FC = () => {
 
               <div className="pt-2 flex justify-end">
                 <a
-                  href="tel:+97444762662"
+                  href="tel:+97450842662"
                   className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#FFFBF2] text-[#4A2B20] font-extrabold text-xs tracking-wider hover:bg-[#D0A769] transition-colors shadow-sm"
                 >
                   <Phone className="w-3.5 h-3.5" />
-                  <span>+974 4476 2662</span>
+                  <span>+974 5084 2662</span>
                 </a>
               </div>
             </div>

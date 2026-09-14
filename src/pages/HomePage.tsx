@@ -69,53 +69,55 @@ export const HomePage: React.FC<HomePageProps> = ({ setActivePage, onOpenBooking
       </section>
 
 
-      {/* 2. OUR FLEET SECTION matching Page 4 design */}
-      <section className="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* 2. OUR FLEET SECTION matching screenshot design */}
+      <section className="py-16 sm:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="text-center space-y-1 mb-10">
-          <div className="flex items-center justify-center gap-2 text-[#B87A5E]">
-            <span>★</span>
-            <h2 className="text-3xl sm:text-4xl font-dmserif text-[#4A1A10] uppercase tracking-wider">OUR FLEET</h2>
-            <span>★</span>
+        <div className="text-center space-y-2 mb-12 sm:mb-16">
+          <div className="flex items-center justify-center gap-3 text-[#B87A5E]">
+            <span className="text-lg sm:text-xl font-bold">*</span>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-dmserif text-[#4A1A10] uppercase tracking-[0.15em] font-bold">
+              OUR FLEET
+            </h2>
+            <span className="text-lg sm:text-xl font-bold">*</span>
           </div>
-          <p className="text-xs sm:text-sm text-[#3A2A20]/80 font-light">
+          <p className="text-sm sm:text-base text-[#9E826F] font-light tracking-wide">
             Well maintained vehicles for a smooth and safe journey
           </p>
         </div>
 
-        {/* 3 Columns Row - Only 3D Models & Info (No White Card Background) */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+        {/* 3 Columns Row - Vehicle Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 max-w-6xl mx-auto">
           
           {/* Column 1: LAND CRUISER */}
           <div className="p-4 text-center space-y-4 flex flex-col justify-between group">
             <div className="space-y-4">
-              <div className="h-44 sm:h-48 flex items-center justify-center">
+              <div className="h-52 sm:h-60 flex items-center justify-center relative w-full">
                 <img
-                  src="/home_assets/fleet_land_cruiser.png"
+                  src="/home_assets/fleet_land_cruiser_hd.png?v=5"
                   alt="Land Cruiser"
-                  className="max-h-full max-w-full object-contain filter drop-shadow-[0_10px_20px_rgba(33,31,31,0.18)] group-hover:scale-105 transition-transform duration-500"
+                  className="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <div>
-                <h3 className="font-dmserif text-lg sm:text-xl font-bold text-[#4A1A10] uppercase tracking-wide">
+                <h3 className="font-dmserif text-xl sm:text-2xl font-bold text-[#4A1A10] uppercase tracking-wider">
                   LAND CRUISER
                 </h3>
-                <p className="text-xs text-[#3A2A20]/80 font-light mt-1">
-                  Luxury. Comfort. Class.
+                <p className="text-xs sm:text-sm text-[#9E826F] font-light mt-1">
+                  Luxury Comfort Class
                 </p>
               </div>
             </div>
 
-            <div className="pt-2">
+            <div className="pt-3">
               <button
                 onClick={() => {
                   onSelectVehicle('toyota-land-cruiser');
                   setActivePage('fleet');
                 }}
-                className="inline-flex items-center gap-1.5 text-xs font-bold tracking-wider text-[#4A1A10] hover:text-[#B87A5E] transition-colors border-b border-[#4A1A10] pb-0.5 uppercase"
+                className="inline-flex items-center gap-1 text-xs sm:text-sm font-bold tracking-wider text-[#4A1A10] hover:text-[#B87A5E] transition-colors uppercase cursor-pointer"
               >
-                <span>VIEW DETAILS</span>
-                <ArrowRight className="w-3.5 h-3.5" />
+                <span className="border-b border-[#4A1A10] pb-0.5">VIEW DETAILS</span>
+                <ArrowRight className="w-3.5 h-3.5 ml-1" />
               </button>
             </div>
           </div>
@@ -123,33 +125,33 @@ export const HomePage: React.FC<HomePageProps> = ({ setActivePage, onOpenBooking
           {/* Column 2: 3 TON PICKUP */}
           <div className="p-4 text-center space-y-4 flex flex-col justify-between group">
             <div className="space-y-4">
-              <div className="h-44 sm:h-48 flex items-center justify-center">
+              <div className="h-52 sm:h-60 flex items-center justify-center relative w-full">
                 <img
-                  src="/home_assets/fleet_pickup.png"
+                  src="/home_assets/fleet_pickup_v10.png?v=10"
                   alt="3 Ton Pickup"
-                  className="max-h-full max-w-full object-contain filter drop-shadow-[0_10px_20px_rgba(33,31,31,0.18)] group-hover:scale-105 transition-transform duration-500"
+                  className="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <div>
-                <h3 className="font-dmserif text-lg sm:text-xl font-bold text-[#4A1A10] uppercase tracking-wide">
+                <h3 className="font-dmserif text-xl sm:text-2xl font-bold text-[#4A1A10] uppercase tracking-wider">
                   3 TON PICKUP
                 </h3>
-                <p className="text-xs text-[#3A2A20]/80 font-light mt-1">
-                  Strong. Reliable. Efficient.
+                <p className="text-xs sm:text-sm text-[#9E826F] font-light mt-1">
+                  Strong Reliable Efficient
                 </p>
               </div>
             </div>
 
-            <div className="pt-2">
+            <div className="pt-3">
               <button
                 onClick={() => {
                   onSelectCategory?.('pickup');
                   setActivePage('fleet');
                 }}
-                className="inline-flex items-center gap-1.5 text-xs font-bold tracking-wider text-[#4A1A10] hover:text-[#B87A5E] transition-colors border-b border-[#4A1A10] pb-0.5 uppercase"
+                className="inline-flex items-center gap-1 text-xs sm:text-sm font-bold tracking-wider text-[#4A1A10] hover:text-[#B87A5E] transition-colors uppercase cursor-pointer"
               >
-                <span>VIEW DETAILS</span>
-                <ArrowRight className="w-3.5 h-3.5" />
+                <span className="border-b border-[#4A1A10] pb-0.5">VIEW DETAILS</span>
+                <ArrowRight className="w-3.5 h-3.5 ml-1" />
               </button>
             </div>
 
@@ -158,33 +160,33 @@ export const HomePage: React.FC<HomePageProps> = ({ setActivePage, onOpenBooking
           {/* Column 3: COASTER BUS */}
           <div className="p-4 text-center space-y-4 flex flex-col justify-between group">
             <div className="space-y-4">
-              <div className="h-44 sm:h-48 flex items-center justify-center">
+              <div className="h-52 sm:h-60 flex items-center justify-center relative w-full">
                 <img
-                  src="/home_assets/fleet_coaster.png"
+                  src="/home_assets/fleet_coaster_hd.png?v=5"
                   alt="Coaster Bus"
-                  className="max-h-full max-w-full object-contain filter drop-shadow-[0_10px_20px_rgba(33,31,31,0.18)] group-hover:scale-105 transition-transform duration-500"
+                  className="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <div>
-                <h3 className="font-dmserif text-lg sm:text-xl font-bold text-[#4A1A10] uppercase tracking-wide">
+                <h3 className="font-dmserif text-xl sm:text-2xl font-bold text-[#4A1A10] uppercase tracking-wider">
                   COASTER BUS
                 </h3>
-                <p className="text-xs text-[#3A2A20]/80 font-light mt-1">
-                  Group Travel. Made Easy.
+                <p className="text-xs sm:text-sm text-[#9E826F] font-light mt-1">
+                  Group Travel Made Easy
                 </p>
               </div>
             </div>
 
-            <div className="pt-2">
+            <div className="pt-3">
               <button
                 onClick={() => {
                   onSelectVehicle('volvo-9600');
                   setActivePage('fleet');
                 }}
-                className="inline-flex items-center gap-1.5 text-xs font-bold tracking-wider text-[#4A1A10] hover:text-[#B87A5E] transition-colors border-b border-[#4A1A10] pb-0.5 uppercase"
+                className="inline-flex items-center gap-1 text-xs sm:text-sm font-bold tracking-wider text-[#4A1A10] hover:text-[#B87A5E] transition-colors uppercase cursor-pointer"
               >
-                <span>VIEW DETAILS</span>
-                <ArrowRight className="w-3.5 h-3.5" />
+                <span className="border-b border-[#4A1A10] pb-0.5">VIEW DETAILS</span>
+                <ArrowRight className="w-3.5 h-3.5 ml-1" />
               </button>
             </div>
           </div>
@@ -192,10 +194,10 @@ export const HomePage: React.FC<HomePageProps> = ({ setActivePage, onOpenBooking
         </div>
 
         {/* Carousel Dots */}
-        <div className="flex items-center justify-center gap-2 mt-8">
-          <span className="w-2.5 h-2.5 rounded-full bg-[#B87A5E]" />
-          <span className="w-2.5 h-2.5 rounded-full bg-[#D0A769]/40" />
-          <span className="w-2.5 h-2.5 rounded-full bg-[#D0A769]/40" />
+        <div className="flex items-center justify-center gap-3 mt-12 sm:mt-16">
+          <span className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-[#B87A5E]" />
+          <span className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-[#E5D5C6]" />
+          <span className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-[#E5D5C6]" />
         </div>
 
       </section>
@@ -257,73 +259,73 @@ export const HomePage: React.FC<HomePageProps> = ({ setActivePage, onOpenBooking
       </section>
 
 
-      {/* 4. SCHOOL TRANSPORTATION SECTION matching Page 4 design */}
-      <section className="relative py-6 lg:py-10 border-t border-[#D0A769]/30 max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-16 overflow-hidden">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center">
+      {/* 4. SCHOOL TRANSPORTATION SECTION matching exact design */}
+      <section className="py-10 lg:py-14 border-t border-[#D0A769]/30 max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-16 overflow-hidden">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
           
-          {/* Left School Bus Image enlarged into top & left region with rich Maroon Arch Border matching Image 1 */}
-          <div className="lg:col-span-6 xl:col-span-6 flex justify-start items-start -mt-6 lg:-mt-10 -ml-4 sm:-ml-8 lg:-ml-12 xl:-ml-16">
-            <div className="w-full relative group">
+          {/* Left School Bus Image aligned flush left with full wide arch */}
+          <div className="lg:col-span-6 flex justify-center lg:justify-start -ml-4 sm:-ml-8 lg:-ml-12 xl:-ml-16 -mt-4 lg:-mt-8">
+            <div className="w-full relative group max-w-[780px]">
               <img
-                src="/home_assets/school_bus_children.png"
+                src="/home_assets/school_bus_perfect_hd.png"
                 alt="Safe School Transportation Qatar"
-                className="w-full h-auto max-h-[480px] sm:max-h-[540px] lg:max-h-[600px] xl:max-h-[640px] object-contain object-left-top filter drop-shadow-[0_16px_32px_rgba(74,26,16,0.14)] transition-transform duration-500 group-hover:scale-[1.01]"
+                className="w-full h-auto object-contain object-left-top filter drop-shadow-[0_16px_32px_rgba(74,26,16,0.12)] transition-transform duration-500 group-hover:scale-[1.01]"
               />
             </div>
           </div>
 
-          {/* Right Content & 4 Icon Columns matching Image 1 */}
-          <div className="lg:col-span-6 xl:col-span-6 space-y-6 pt-2 lg:pt-0">
+          {/* Right Content & 4 Icon Columns matching attached screenshot */}
+          <div className="lg:col-span-6 space-y-6 lg:pl-2">
             
-            <div className="space-y-2">
-              <span className="text-xs sm:text-sm font-extrabold tracking-widest text-[#5C1D18] uppercase block">
+            <div className="space-y-3">
+              <span className="text-xs sm:text-sm font-bold tracking-[0.2em] text-[#6B2319] uppercase block">
                 SCHOOL TRANSPORTATION
               </span>
-              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-cormorant font-bold text-[#3A1B14] leading-tight tracking-tight">
-                Safe Journeys Start Here.
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-cormorant font-bold text-[#2E140E] leading-[1.1] tracking-tight">
+                Safe Journeys<br className="hidden sm:block" /> Start Here.
               </h2>
-              <p className="text-sm sm:text-base lg:text-lg text-[#3A2A20] font-light leading-relaxed max-w-xl">
+              <p className="text-sm sm:text-base lg:text-lg text-[#4E3B30] font-normal leading-relaxed max-w-lg pt-1">
                 We provide dependable school transportation solutions that ensure students reach their destination safely, comfortably and on time every day.
               </p>
             </div>
 
-            {/* 4 Feature Columns matching Image 1 icons and vertical dividers */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-0 pt-6 border-t border-[#D0A769]/30 text-center divide-x divide-[#D0A769]/40">
+            {/* 4 Feature Columns with subtle vertical dividers */}
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-0 pt-6 border-t border-[#D0A769]/30 text-center divide-x divide-[#D0A769]/30">
               
               {/* Safety First */}
               <div className="px-2 sm:px-3 space-y-2">
-                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#FAF0DC] border border-[#5C1D18]/30 shadow-xs flex items-center justify-center mx-auto">
-                  <ShieldCheck className="w-6 h-6 sm:w-7 sm:h-7 text-[#5C1D18]" />
+                <div className="w-13 h-13 sm:w-15 sm:h-15 rounded-full bg-[#F5EBE0]/80 border border-[#6B2319]/25 shadow-xs flex items-center justify-center mx-auto transition-transform duration-300 hover:scale-105">
+                  <ShieldCheck className="w-6 h-6 sm:w-7 sm:h-7 text-[#6B2319]" />
                 </div>
-                <h4 className="font-bold text-xs sm:text-sm text-[#3A1B14]">Safety First</h4>
-                <p className="text-[10px] sm:text-xs text-[#3A2A20]/80 font-light leading-tight">Safety-focused operations.</p>
+                <h4 className="font-bold text-xs sm:text-sm text-[#2E140E]">Safety First</h4>
+                <p className="text-[10px] sm:text-xs text-[#524035] font-normal leading-snug">Safety-focused operations.</p>
               </div>
 
               {/* Comfort Assured */}
               <div className="px-2 sm:px-3 space-y-2">
-                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#FAF0DC] border border-[#5C1D18]/30 shadow-xs flex items-center justify-center mx-auto">
-                  <Bus className="w-6 h-6 sm:w-7 sm:h-7 text-[#5C1D18]" />
+                <div className="w-13 h-13 sm:w-15 sm:h-15 rounded-full bg-[#F5EBE0]/80 border border-[#6B2319]/25 shadow-xs flex items-center justify-center mx-auto transition-transform duration-300 hover:scale-105">
+                  <Bus className="w-6 h-6 sm:w-7 sm:h-7 text-[#6B2319]" />
                 </div>
-                <h4 className="font-bold text-xs sm:text-sm text-[#3A1B14]">Comfort Assured</h4>
-                <p className="text-[10px] sm:text-xs text-[#3A2A20]/80 font-light leading-tight">Air-conditioned & comfortable buses.</p>
+                <h4 className="font-bold text-xs sm:text-sm text-[#2E140E]">Comfort Assured</h4>
+                <p className="text-[10px] sm:text-xs text-[#524035] font-normal leading-snug">Air-conditioned & comfortable buses.</p>
               </div>
 
               {/* On-Time Every Day */}
               <div className="px-2 sm:px-3 space-y-2">
-                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#FAF0DC] border border-[#5C1D18]/30 shadow-xs flex items-center justify-center mx-auto">
-                  <Timer className="w-6 h-6 sm:w-7 sm:h-7 text-[#5C1D18]" />
+                <div className="w-13 h-13 sm:w-15 sm:h-15 rounded-full bg-[#F5EBE0]/80 border border-[#6B2319]/25 shadow-xs flex items-center justify-center mx-auto transition-transform duration-300 hover:scale-105">
+                  <Timer className="w-6 h-6 sm:w-7 sm:h-7 text-[#6B2319]" />
                 </div>
-                <h4 className="font-bold text-xs sm:text-sm text-[#3A1B14]">On-Time Every Day</h4>
-                <p className="text-[10px] sm:text-xs text-[#3A2A20]/80 font-light leading-tight">Reliable transport for every schedule.</p>
+                <h4 className="font-bold text-xs sm:text-sm text-[#2E140E]">On-Time Every Day</h4>
+                <p className="text-[10px] sm:text-xs text-[#524035] font-normal leading-snug">Reliable transport for every schedule.</p>
               </div>
 
               {/* Trusted By Schools */}
               <div className="px-2 sm:px-3 space-y-2">
-                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#FAF0DC] border border-[#5C1D18]/30 shadow-xs flex items-center justify-center mx-auto">
-                  <Users className="w-6 h-6 sm:w-7 sm:h-7 text-[#5C1D18]" />
+                <div className="w-13 h-13 sm:w-15 sm:h-15 rounded-full bg-[#F5EBE0]/80 border border-[#6B2319]/25 shadow-xs flex items-center justify-center mx-auto transition-transform duration-300 hover:scale-105">
+                  <Users className="w-6 h-6 sm:w-7 sm:h-7 text-[#6B2319]" />
                 </div>
-                <h4 className="font-bold text-xs sm:text-sm text-[#3A1B14]">Trusted By Schools</h4>
-                <p className="text-[10px] sm:text-xs text-[#3A2A20]/80 font-light leading-tight">Professional service you can rely on.</p>
+                <h4 className="font-bold text-xs sm:text-sm text-[#2E140E]">Trusted By Schools</h4>
+                <p className="text-[10px] sm:text-xs text-[#524035] font-normal leading-snug">Professional service you can rely on.</p>
               </div>
 
             </div>
@@ -362,11 +364,11 @@ export const HomePage: React.FC<HomePageProps> = ({ setActivePage, onOpenBooking
               onClick={() => setActivePage('services')}
               className="flex flex-col items-center justify-between cursor-pointer group"
             >
-              <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden mb-2 border-2 border-[#D0A769]/40 shadow-xs group-hover:scale-105 transition-transform duration-300">
+              <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden mb-2 group-hover:scale-105 transition-transform duration-300 flex items-center justify-center">
                 <img
                   src={srv.icon}
                   alt={srv.title}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover rounded-full"
                 />
               </div>
               <h4 className="text-[11px] font-bold text-[#4A1A10] leading-tight max-w-[110px]">

@@ -111,7 +111,9 @@ export const FleetPage: React.FC<FleetPageProps> = ({ initialCategory = 'all', o
                     <img
                       src={vehicle.image}
                       alt={vehicle.name}
-                      className="relative z-10 w-full h-44 object-contain group-hover:scale-105 transition-transform duration-500 drop-shadow-md"
+                      className={`relative z-10 w-full h-44 object-contain transition-transform duration-500 drop-shadow-md ${
+                        vehicle.id === 'toyota-hilux' ? 'scale-125 group-hover:scale-[1.30]' : 'group-hover:scale-105'
+                      }`}
                     />
 
                     <span className="absolute top-3 left-3 z-20 px-2.5 py-0.5 rounded-full bg-[#211F1F] text-[#D0A769] text-[10px] font-bold">

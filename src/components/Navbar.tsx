@@ -68,11 +68,11 @@ export const Navbar: React.FC<NavbarProps> = ({ activePage, setActivePage, onOpe
           {/* Right Action CTA */}
           <div className="hidden lg:flex items-center gap-4">
             <a 
-              href="tel:+97444762662"
+              href="tel:+97450842662"
               className="flex items-center gap-2 text-xs font-semibold text-[#211F1F] hover:text-[#B87A5E] transition-colors"
             >
               <Phone className="w-3.5 h-3.5 text-[#B87A5E]" />
-              <span>+974 4476 2662</span>
+              <span>+974 5084 2662</span>
             </a>
             <button
               onClick={onOpenBooking}
@@ -114,11 +114,11 @@ export const Navbar: React.FC<NavbarProps> = ({ activePage, setActivePage, onOpe
           ))}
           <div className="pt-4 border-t border-[#D0A769]/20 flex flex-col gap-3">
             <a 
-              href="tel:+97444762662"
+              href="tel:+97450842662"
               className="flex items-center gap-2 text-xs font-semibold text-[#211F1F] px-3 py-1"
             >
               <Phone className="w-4 h-4 text-[#B87A5E]" />
-              <span>Call Us: +974 4476 2662</span>
+              <span>Call Us: +974 5084 2662</span>
             </a>
             <button
               onClick={() => {
