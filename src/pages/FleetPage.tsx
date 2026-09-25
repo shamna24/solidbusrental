@@ -14,6 +14,13 @@ export const FleetPage: React.FC<FleetPageProps> = ({ initialCategory = 'all', o
   const [selectedCategory, setSelectedCategory] = useState<VehicleCategory>(initialCategory);
   const [searchQuery, setSearchQuery] = useState('');
 
+  React.useEffect(() => {
+    if (initialCategory) {
+      setSelectedCategory(initialCategory);
+    }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [initialCategory]);
+
   const filteredFleet = FLEET_DATA.filter((v) => {
     const matchesCategory = selectedCategory === 'all' || v.category === selectedCategory;
     const matchesSearch = v.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
