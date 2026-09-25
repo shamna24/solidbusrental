@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import type { PageView } from '../types';
-import { SERVICES_LIST, FLEET_DATA } from '../data/fleetData';
+import { SERVICES_LIST } from '../data/fleetData';
 import { ArrowRight, Bus, Check, ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface ServicesPageProps {

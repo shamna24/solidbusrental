@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import type { VehicleCategory } from '../types';
 import { FLEET_DATA } from '../data/fleetData';
-import { Search, Shield, Users, Gauge, Zap, ArrowRight } from 'lucide-react';
+import { Search } from 'lucide-react';
 
 
 interface FleetPageProps {

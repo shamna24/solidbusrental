@@ -9,7 +9,7 @@ interface NavbarProps {
   onOpenBooking: () => void;
 }
 
-export const Navbar: React.FC<NavbarProps> = ({ activePage, setActivePage, onOpenBooking }) => {
+export const Navbar: React.FC<NavbarProps> = ({ activePage, setActivePage }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navItems: { label: string; page: PageView }[] = [

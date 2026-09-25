@@ -1,6 +1,6 @@
 import React from 'react';
 import type { PageView } from '../types';
-import { Phone, Mail, MapPin, MessageCircle } from 'lucide-react';
+import { Phone, Mail, MapPin } from 'lucide-react';
 
 
 interface FooterProps {
