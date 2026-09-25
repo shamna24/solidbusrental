@@ -81,10 +81,10 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ setActivePage, onSel
                     onSelectCategory('bus');
                     setActivePage('fleet');
                   }}
-                  className="inline-flex items-center gap-2 text-base font-bold text-[#4A1A10] hover:text-[#B87A5E] transition-colors italic font-script"
+                  className="inline-flex items-center gap-3 text-2xl sm:text-3xl lg:text-4xl font-bold text-[#4A1A10] hover:text-[#B87A5E] transition-all italic font-script transform hover:translate-x-1.5"
                 >
                   <span>Explore More</span>
-                  <ArrowRight className="w-5 h-5 not-italic" />
+                  <ArrowRight className="w-6 h-6 sm:w-7 sm:h-7 not-italic" />
                 </button>
               </div>
             </div>
@@ -124,10 +124,10 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ setActivePage, onSel
                     onSelectCategory('car');
                     setActivePage('fleet');
                   }}
-                  className="inline-flex items-center gap-2 text-base font-bold text-[#4A1A10] hover:text-[#B87A5E] transition-colors italic font-script"
+                  className="inline-flex items-center gap-3 text-2xl sm:text-3xl lg:text-4xl font-bold text-[#4A1A10] hover:text-[#B87A5E] transition-all italic font-script transform hover:translate-x-1.5"
                 >
                   <span>Explore More</span>
-                  <ArrowRight className="w-5 h-5 not-italic" />
+                  <ArrowRight className="w-6 h-6 sm:w-7 sm:h-7 not-italic" />
                 </button>
               </div>
             </div>
@@ -151,10 +151,10 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ setActivePage, onSel
                     onSelectCategory('pickup');
                     setActivePage('fleet');
                   }}
-                  className="inline-flex items-center gap-2 text-base font-bold text-[#4A1A10] hover:text-[#B87A5E] transition-colors italic font-script"
+                  className="inline-flex items-center gap-3 text-2xl sm:text-3xl lg:text-4xl font-bold text-[#4A1A10] hover:text-[#B87A5E] transition-all italic font-script transform hover:translate-x-1.5"
                 >
                   <span>Explore More</span>
-                  <ArrowRight className="w-5 h-5 not-italic" />
+                  <ArrowRight className="w-6 h-6 sm:w-7 sm:h-7 not-italic" />
                 </button>
               </div>
             </div>
