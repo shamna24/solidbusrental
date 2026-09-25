@@ -153,24 +153,16 @@ export const AboutPage: React.FC<AboutPageProps> = ({ setActivePage, onOpenBooki
                 </h3>
               </div>
 
-              <div className="flex flex-col sm:flex-row items-start gap-4">
-                <img
-                  src="/home_assets/about_jaseem_moorkot.png"
-                  alt="Jaseem Moorkot - Founder & Managing Director Solid Bus Rental"
-                  className="w-36 sm:w-40 h-auto rounded-2xl border-2 border-[#D0A769]/30 shadow-md object-cover shrink-0"
-                />
-
-                <div className="space-y-3">
-                  <div className="bg-[#F9F1DC] p-3 rounded-xl border-l-4 border-[#B87A5E]">
-                    <p className="text-xs text-[#4A1A10] font-bold italic leading-snug">
-                      "Our mission is simple — to move people with care, safety and responsibility."
-                    </p>
-                  </div>
-
-                  <p className="text-xs text-[#211F1F]/80 font-light leading-relaxed">
-                    With a passion for excellence and a customer-first approach, Mr. Jaseem Moorkot founded Solid Bus Rental to set new benchmarks in Qatar's transportation industry. His vision continues to drive our commitment to quality, reliability and trust.
+              <div className="space-y-4">
+                <div className="bg-[#F9F1DC] p-4 rounded-xl border-l-4 border-[#B87A5E]">
+                  <p className="text-xs sm:text-sm text-[#4A1A10] font-bold italic leading-snug">
+                    "Our mission is simple — to move people with care, safety and responsibility."
                   </p>
                 </div>
+
+                <p className="text-xs sm:text-sm text-[#211F1F]/80 font-light leading-relaxed">
+                  With a passion for excellence and a customer-first approach, Mr. Jaseem Moorkot founded Solid Bus Rental to set new benchmarks in Qatar's transportation industry. His vision continues to drive our commitment to quality, reliability and trust.
+                </p>
               </div>
 
             </div>
