@@ -49,13 +49,13 @@ export const AboutPage: React.FC<AboutPageProps> = ({ setActivePage, onOpenBooki
 
 
       {/* 2. OUR STORY: A JOURNEY BUILT ON DEPENDABILITY */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-[#FFFBF2] border border-[#D0A769]/40 rounded-[32px] p-6 sm:p-10 shadow-sm">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+      <section className="w-full bg-[#FFFBF2] py-12 lg:py-16 border-y border-[#D0A769]/30">
+        <div className="w-full max-w-[1700px] mx-auto px-4 sm:px-8 lg:px-12">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
             
             {/* Left Fleet Line Image */}
             <div className="lg:col-span-5">
-              <div className="rounded-[24px] overflow-hidden border border-[#D0A769]/30 shadow-md">
+              <div className="rounded-[28px] overflow-hidden border border-[#D0A769]/30 shadow-md">
                 <img
                   src="/home_assets/about_fleet_line.png"
                   alt="Solid Bus Rental Fleet Line Vehicles"
@@ -75,7 +75,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ setActivePage, onOpenBooki
                 </h2>
               </div>
 
-              <div className="space-y-4 text-xs sm:text-sm text-[#211F1F]/80 font-light leading-relaxed">
+              <div className="space-y-4 text-xs sm:text-sm lg:text-base text-[#211F1F]/80 font-light leading-relaxed">
                 <p>
                   Founded with a vision to deliver world-class transportation services, Solid Bus Rental has grown into one of Qatar's most reliable transport providers. Our commitment to safety, quality and customer satisfaction has helped us build long-lasting relationships with schools, companies, hotels and organizations across the country.
                 </p>
@@ -87,7 +87,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ setActivePage, onOpenBooki
               {/* 4 Stat Badges matching PDF icon grid */}
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 border-t border-[#D0A769]/30">
                 
-                <div className="flex flex-col items-center text-center space-y-1.5 p-2 bg-[#F9F1DC]/60 rounded-xl border border-[#D0A769]/20">
+                <div className="flex flex-col items-center text-center space-y-1.5 p-3 bg-[#F9F1DC]/70 rounded-xl border border-[#D0A769]/30">
                   <div className="flex items-center gap-1">
                     <Users className="w-5 h-5 text-[#B87A5E]" />
                     <span className="text-2xl font-cormorant font-bold text-[#4A1A10]">15+</span>
@@ -97,7 +97,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ setActivePage, onOpenBooki
                   </span>
                 </div>
 
-                <div className="flex flex-col items-center text-center space-y-1.5 p-2 bg-[#F9F1DC]/60 rounded-xl border border-[#D0A769]/20">
+                <div className="flex flex-col items-center text-center space-y-1.5 p-3 bg-[#F9F1DC]/70 rounded-xl border border-[#D0A769]/30">
                   <div className="flex items-center gap-1">
                     <Bus className="w-5 h-5 text-[#B87A5E]" />
                     <span className="text-2xl font-cormorant font-bold text-[#4A1A10]">100+</span>
@@ -107,7 +107,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ setActivePage, onOpenBooki
                   </span>
                 </div>
 
-                <div className="flex flex-col items-center text-center space-y-1.5 p-2 bg-[#F9F1DC]/60 rounded-xl border border-[#D0A769]/20">
+                <div className="flex flex-col items-center text-center space-y-1.5 p-3 bg-[#F9F1DC]/70 rounded-xl border border-[#D0A769]/30">
                   <div className="flex items-center gap-1">
                     <Award className="w-5 h-5 text-[#B87A5E]" />
                     <span className="text-2xl font-cormorant font-bold text-[#4A1A10]">500+</span>
@@ -117,7 +117,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ setActivePage, onOpenBooki
                   </span>
                 </div>
 
-                <div className="flex flex-col items-center text-center space-y-1.5 p-2 bg-[#F9F1DC]/60 rounded-xl border border-[#D0A769]/20">
+                <div className="flex flex-col items-center text-center space-y-1.5 p-3 bg-[#F9F1DC]/70 rounded-xl border border-[#D0A769]/30">
                   <div className="flex items-center gap-1">
                     <ShieldCheck className="w-5 h-5 text-[#B87A5E]" />
                     <span className="text-2xl font-cormorant font-bold text-[#4A1A10]">100%</span>
