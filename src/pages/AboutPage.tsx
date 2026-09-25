@@ -137,24 +137,24 @@ export const AboutPage: React.FC<AboutPageProps> = ({ setActivePage, onOpenBooki
 
 
       {/* 3. FOUNDER & MANAGING DIRECTOR + LEADERSHIP SECTION */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+      <section className="w-full max-w-[1700px] mx-auto px-4 sm:px-8 lg:px-12">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
           
           {/* Left Column: FOUNDER & MANAGING DIRECTOR */}
-          <div className="lg:col-span-5 bg-[#FFFBF2] border border-[#D0A769]/40 rounded-[32px] p-6 sm:p-8 space-y-6 shadow-sm flex flex-col justify-between">
+          <div className="lg:col-span-5 bg-[#FFFBF2] border border-[#D0A769]/40 rounded-[32px] p-6 sm:p-10 space-y-6 shadow-sm flex flex-col justify-between h-full w-full">
             <div className="space-y-4">
               
               <div>
                 <span className="text-xs font-extrabold tracking-widest text-[#B87A5E] uppercase block">
                   FOUNDER & MANAGING DIRECTOR
                 </span>
-                <h3 className="text-3xl font-cormorant font-bold text-[#4A1A10] uppercase tracking-tight mt-0.5">
+                <h3 className="text-3xl sm:text-4xl font-cormorant font-bold text-[#4A1A10] uppercase tracking-tight mt-0.5">
                   JASEEM MOORKOT
                 </h3>
               </div>
 
               <div className="space-y-4">
-                <div className="bg-[#F9F1DC] p-4 rounded-xl border-l-4 border-[#B87A5E]">
+                <div className="bg-[#F9F1DC] p-4 sm:p-5 rounded-xl border-l-4 border-[#B87A5E]">
                   <p className="text-xs sm:text-sm text-[#4A1A10] font-bold italic leading-snug">
                     "Our mission is simple — to move people with care, safety and responsibility."
                   </p>
@@ -176,13 +176,13 @@ export const AboutPage: React.FC<AboutPageProps> = ({ setActivePage, onOpenBooki
 
 
           {/* Right Column: LEADERSHIP THAT DRIVES EXCELLENCE */}
-          <div className="lg:col-span-7 bg-[#FFFBF2] border border-[#D0A769]/40 rounded-[32px] p-6 sm:p-8 space-y-6 shadow-sm flex flex-col justify-between">
+          <div className="lg:col-span-7 bg-[#FFFBF2] border border-[#D0A769]/40 rounded-[32px] p-6 sm:p-10 space-y-6 shadow-sm flex flex-col justify-between h-full w-full">
             
             <div className="space-y-3">
               <span className="text-xs font-extrabold tracking-widest text-[#B87A5E] uppercase">
                 LEADERSHIP
               </span>
-              <h2 className="text-3xl sm:text-4xl font-cormorant font-bold text-[#4A1A10] uppercase tracking-tight leading-tight">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-cormorant font-bold text-[#4A1A10] uppercase tracking-tight leading-tight">
                 LEADERSHIP THAT DRIVES EXCELLENCE
               </h2>
               <p className="text-xs sm:text-sm text-[#211F1F]/80 font-light leading-relaxed">
@@ -245,15 +245,15 @@ export const AboutPage: React.FC<AboutPageProps> = ({ setActivePage, onOpenBooki
 
 
       {/* 4. MODERN FLEET. PROFESSIONAL OPERATIONS. */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="w-full max-w-[1700px] mx-auto px-4 sm:px-8 lg:px-12">
         <div className="bg-[#FFFBF2] border border-[#D0A769]/40 rounded-[32px] p-6 sm:p-10 shadow-sm">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             
             <div className="lg:col-span-5 space-y-4">
               <span className="text-xs font-extrabold tracking-widest text-[#B87A5E] uppercase">
                 OUR STRENGTH
               </span>
-              <h2 className="text-3xl sm:text-4xl font-cormorant font-bold text-[#4A1A10] uppercase tracking-tight leading-tight">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-cormorant font-bold text-[#4A1A10] uppercase tracking-tight leading-tight">
                 MODERN FLEET.<br />PROFESSIONAL OPERATIONS.
               </h2>
               <p className="text-xs sm:text-sm text-[#211F1F]/80 font-light leading-relaxed">
@@ -287,7 +287,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ setActivePage, onOpenBooki
 
 
       {/* 5. CALL TO ACTION BANNER */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="w-full max-w-[1700px] mx-auto px-4 sm:px-8 lg:px-12">
         <div className="bg-[#F9F1DC]/80 border border-[#D0A769]/40 rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-sm">
           <div className="flex items-center gap-4">
             <div className="w-12 h-12 rounded-full bg-[#B87A5E]/20 flex items-center justify-center shrink-0">
