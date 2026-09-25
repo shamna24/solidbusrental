@@ -20,10 +20,12 @@ export const FleetPage: React.FC<FleetPageProps> = ({ initialCategory = 'all', o
       setSelectedCategory(initialCategory);
     }
     const timer = setTimeout(() => {
-      if (categorySectionRef.current) {
+      if (initialCategory && initialCategory !== 'all' && categorySectionRef.current) {
         const yOffset = -90; // offset for sticky header navbar (80px height + spacing)
         const y = categorySectionRef.current.getBoundingClientRect().top + window.pageYOffset + yOffset;
         window.scrollTo({ top: Math.max(0, y), behavior: 'smooth' });
+      } else {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
       }
     }, 50);
 

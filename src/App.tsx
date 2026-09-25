@@ -16,6 +16,13 @@ export const App: React.FC = () => {
   const [isBookingOpen, setIsBookingOpen] = useState<boolean>(false);
   const [selectedVehicleId, setSelectedVehicleId] = useState<string | undefined>(undefined);
 
+  const handlePageChange = (page: PageView) => {
+    if (page === 'fleet') {
+      setFleetCategory('all');
+    }
+    setActivePage(page);
+  };
+
   const handleOpenBooking = (vehicleId?: string) => {
     setSelectedVehicleId(vehicleId);
     setIsBookingOpen(true);
@@ -31,7 +38,7 @@ export const App: React.FC = () => {
       {/* Top Header Navbar */}
       <Navbar
         activePage={activePage}
-        setActivePage={setActivePage}
+        setActivePage={handlePageChange}
         onOpenBooking={() => handleOpenBooking()}
       />
 
@@ -75,7 +82,7 @@ export const App: React.FC = () => {
 
       {/* Global Footer */}
       <Footer
-        setActivePage={setActivePage}
+        setActivePage={handlePageChange}
         onOpenBooking={() => handleOpenBooking()}
       />
 
