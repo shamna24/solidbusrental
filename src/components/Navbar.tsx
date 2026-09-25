@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import type { PageView } from '../types';
 
-import { Menu, X, ArrowRight, Phone } from 'lucide-react';
+import { Menu, X, Phone } from 'lucide-react';
 
 interface NavbarProps {
   activePage: PageView;
@@ -74,13 +74,6 @@ export const Navbar: React.FC<NavbarProps> = ({ activePage, setActivePage, onOpe
               <Phone className="w-3.5 h-3.5 text-[#B87A5E]" />
               <span>+974 5084 2662</span>
             </a>
-            <button
-              onClick={onOpenBooking}
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-md bg-[#211F1F] text-[#FFFBF2] text-xs font-bold tracking-wider hover:bg-[#B87A5E] transition-all transform hover:-translate-y-0.5 shadow-sm"
-            >
-              <span>BOOK YOUR RIDE</span>
-              <ArrowRight className="w-3.5 h-3.5" />
-            </button>
           </div>
 
           {/* Mobile hamburger button */}
@@ -120,16 +113,6 @@ export const Navbar: React.FC<NavbarProps> = ({ activePage, setActivePage, onOpe
               <Phone className="w-4 h-4 text-[#B87A5E]" />
               <span>Call Us: +974 5084 2662</span>
             </a>
-            <button
-              onClick={() => {
-                setMobileMenuOpen(false);
-                onOpenBooking();
-              }}
-              className="w-full flex items-center justify-center gap-2 px-5 py-3 rounded-md bg-[#B87A5E] text-white font-bold text-xs tracking-wider shadow-sm"
-            >
-              <span>BOOK YOUR RIDE</span>
-              <ArrowRight className="w-4 h-4" />
-            </button>
           </div>
         </div>
       )}
