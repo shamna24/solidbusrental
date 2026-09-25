@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import type { PageView } from '../types';
-import { SERVICES_LIST } from '../data/fleetData';
+import { SERVICES_LIST, FLEET_DATA } from '../data/fleetData';
 import { ArrowRight, Bus, Check, ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface ServicesPageProps {
@@ -23,7 +23,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ setActivePage, onSel
     <div className="bg-[#F5E3CD] text-[#211F1F] font-montserrat min-h-screen pb-16 space-y-16">
       
       {/* 1. HERO SECTION matching Page 5 exact PDF design */}
-      <section className="relative border-b border-[#D0A769]/30 overflow-hidden bg-[#F5E3CD] py-4 lg:py-8">
+      <section className="relative border-b border-[#D0A769]/30 overflow-hidden bg-[#F5E3CD] pt-0 pb-4 lg:pb-8">
         <div className="w-full max-w-[1800px] mx-auto px-2 sm:px-4 lg:px-6">
           <div className="relative w-full">
             <img
@@ -169,8 +169,9 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ setActivePage, onSel
 
           </div>
         </div>
-
       </section>
+
+
 
 
       {/* 4. FULL SERVICES HORIZONTAL SLIDER CAROUSEL WITH FULL BACKGROUND CARDS */}

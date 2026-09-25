@@ -26,7 +26,7 @@ export const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#F9F1DC] flex flex-col justify-between font-montserrat text-[#211F1F]">
+    <div className="min-h-screen bg-[#F8F3E9] flex flex-col justify-between font-montserrat text-[#211F1F]">
       
       {/* Top Header Navbar */}
       <Navbar
