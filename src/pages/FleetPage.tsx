@@ -13,12 +13,21 @@ interface FleetPageProps {
 export const FleetPage: React.FC<FleetPageProps> = ({ initialCategory = 'all', onOpenBooking, onSelectVehicle }) => {
   const [selectedCategory, setSelectedCategory] = useState<VehicleCategory>(initialCategory);
   const [searchQuery, setSearchQuery] = useState('');
+  const categorySectionRef = React.useRef<HTMLDivElement>(null);
 
   React.useEffect(() => {
     if (initialCategory) {
       setSelectedCategory(initialCategory);
     }
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    const timer = setTimeout(() => {
+      if (categorySectionRef.current) {
+        const yOffset = -90; // offset for sticky header navbar (80px height + spacing)
+        const y = categorySectionRef.current.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: Math.max(0, y), behavior: 'smooth' });
+      }
+    }, 50);
+
+    return () => clearTimeout(timer);
   }, [initialCategory]);
 
   const filteredFleet = FLEET_DATA.filter((v) => {
@@ -46,7 +55,7 @@ export const FleetPage: React.FC<FleetPageProps> = ({ initialCategory = 'all', o
           </p>
 
           {/* FILTER TABS matching PDF navigation */}
-          <div className="flex flex-wrap items-center justify-center gap-3 pt-4">
+          <div ref={categorySectionRef} className="flex flex-wrap items-center justify-center gap-3 pt-4">
             {[
               { id: 'all', label: 'ALL VEHICLES' },
               { id: 'bus', label: 'CATEGORY A - BUSES' },

@@ -80,7 +80,6 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ setActivePage, onSel
                   onClick={() => {
                     onSelectCategory('bus');
                     setActivePage('fleet');
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
                   }}
                   className="inline-flex items-center gap-3 text-2xl sm:text-3xl lg:text-4xl font-bold text-[#4A1A10] hover:text-[#B87A5E] transition-all italic font-script transform hover:translate-x-1.5"
                 >
@@ -124,7 +123,6 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ setActivePage, onSel
                   onClick={() => {
                     onSelectCategory('car');
                     setActivePage('fleet');
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
                   }}
                   className="inline-flex items-center gap-3 text-2xl sm:text-3xl lg:text-4xl font-bold text-[#4A1A10] hover:text-[#B87A5E] transition-all italic font-script transform hover:translate-x-1.5"
                 >
@@ -152,7 +150,6 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ setActivePage, onSel
                   onClick={() => {
                     onSelectCategory('pickup');
                     setActivePage('fleet');
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
                   }}
                   className="inline-flex items-center gap-3 text-2xl sm:text-3xl lg:text-4xl font-bold text-[#4A1A10] hover:text-[#B87A5E] transition-all italic font-script transform hover:translate-x-1.5"
                 >
