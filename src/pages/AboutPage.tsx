@@ -135,116 +135,118 @@ export const AboutPage: React.FC<AboutPageProps> = ({ setActivePage, onOpenBooki
       </section>
 
 
-      {/* 3. FOUNDER & MANAGING DIRECTOR + LEADERSHIP SECTION */}
-      <section className="w-full max-w-[1700px] mx-auto px-4 sm:px-8 lg:px-12 mt-12 lg:mt-16">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
-          
-          {/* Left Column: FOUNDER & MANAGING DIRECTOR */}
-          <div className="lg:col-span-5 bg-[#FFFBF2] border border-[#D0A769]/40 rounded-[32px] p-6 sm:p-10 space-y-6 shadow-sm flex flex-col justify-between h-full w-full">
-            <div className="space-y-4">
-              
-              <div>
-                <span className="text-xs font-extrabold tracking-widest text-[#B87A5E] uppercase block">
-                  FOUNDER & MANAGING DIRECTOR
-                </span>
-                <h3 className="text-3xl sm:text-4xl font-cormorant font-bold text-[#4A1A10] uppercase tracking-tight mt-0.5">
-                  JASEEM MOORKOT
-                </h3>
-              </div>
-
+      {/* 3. FOUNDER & MANAGING DIRECTOR + LEADERSHIP SECTION (Full Width Background) */}
+      <section className="w-full bg-[#F5E3CD] py-12 lg:py-16 border-b border-[#D0A769]/30">
+        <div className="w-full max-w-[1700px] mx-auto px-4 sm:px-8 lg:px-12">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
+            
+            {/* Left Column: FOUNDER & MANAGING DIRECTOR */}
+            <div className="lg:col-span-5 bg-[#FFFBF2] border border-[#D0A769]/40 rounded-[32px] p-6 sm:p-10 space-y-6 shadow-sm flex flex-col justify-between h-full w-full">
               <div className="space-y-4">
-                <div className="bg-[#F9F1DC] p-4 sm:p-5 rounded-xl border-l-4 border-[#B87A5E]">
-                  <p className="text-xs sm:text-sm text-[#4A1A10] font-bold italic leading-snug">
-                    "Our mission is simple — to move people with care, safety and responsibility."
+                
+                <div>
+                  <span className="text-xs font-extrabold tracking-widest text-[#B87A5E] uppercase block">
+                    FOUNDER & MANAGING DIRECTOR
+                  </span>
+                  <h3 className="text-3xl sm:text-4xl font-cormorant font-bold text-[#4A1A10] uppercase tracking-tight mt-0.5">
+                    JASEEM MOORKOT
+                  </h3>
+                </div>
+
+                <div className="space-y-4">
+                  <div className="bg-[#F9F1DC] p-4 sm:p-5 rounded-xl border-l-4 border-[#B87A5E]">
+                    <p className="text-xs sm:text-sm text-[#4A1A10] font-bold italic leading-snug">
+                      "Our mission is simple — to move people with care, safety and responsibility."
+                    </p>
+                  </div>
+
+                  <p className="text-xs sm:text-sm text-[#211F1F]/80 font-light leading-relaxed">
+                    With a passion for excellence and a customer-first approach, Mr. Jaseem Moorkot founded Solid Bus Rental to set new benchmarks in Qatar's transportation industry. His vision continues to drive our commitment to quality, reliability and trust.
                   </p>
                 </div>
 
-                <p className="text-xs sm:text-sm text-[#211F1F]/80 font-light leading-relaxed">
-                  With a passion for excellence and a customer-first approach, Mr. Jaseem Moorkot founded Solid Bus Rental to set new benchmarks in Qatar's transportation industry. His vision continues to drive our commitment to quality, reliability and trust.
-                </p>
               </div>
 
+              <div className="pt-2 border-t border-[#D0A769]/20 text-right">
+                <span className="font-script text-3xl text-[#B87A5E] inline-block transform -rotate-2">
+                  Jaseem Moorkot
+                </span>
+              </div>
             </div>
 
-            <div className="pt-2 border-t border-[#D0A769]/20 text-right">
-              <span className="font-script text-3xl text-[#B87A5E] inline-block transform -rotate-2">
-                Jaseem Moorkot
-              </span>
-            </div>
-          </div>
 
-
-          {/* Right Column: LEADERSHIP THAT DRIVES EXCELLENCE */}
-          <div className="lg:col-span-7 bg-[#FFFBF2] border border-[#D0A769]/40 rounded-[32px] p-6 sm:p-10 space-y-6 shadow-sm flex flex-col justify-between h-full w-full">
-            
-            <div className="space-y-3">
-              <span className="text-xs font-extrabold tracking-widest text-[#B87A5E] uppercase">
-                LEADERSHIP
-              </span>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-cormorant font-bold text-[#4A1A10] uppercase tracking-tight leading-tight">
-                LEADERSHIP THAT DRIVES EXCELLENCE
-              </h2>
-              <p className="text-xs sm:text-sm text-[#211F1F]/80 font-light leading-relaxed">
-                Our leadership reflects our commitment to safety, reliability and customer satisfaction. We continue to innovate and raise the standards of transportation in Qatar.
-              </p>
-            </div>
-
-            {/* Vision, Mission, Values 3 Columns */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 border-t border-[#D0A769]/30">
+            {/* Right Column: LEADERSHIP THAT DRIVES EXCELLENCE */}
+            <div className="lg:col-span-7 bg-[#FFFBF2] border border-[#D0A769]/40 rounded-[32px] p-6 sm:p-10 space-y-6 shadow-sm flex flex-col justify-between h-full w-full">
               
-              {/* VISION */}
-              <div className="bg-[#F9F1DC]/60 p-4 rounded-2xl border border-[#D0A769]/30 text-center space-y-2">
-                <div className="w-10 h-10 rounded-full bg-[#B87A5E]/15 mx-auto flex items-center justify-center">
-                  <Eye className="w-5 h-5 text-[#B87A5E]" />
-                </div>
-                <h4 className="font-extrabold text-xs text-[#4A1A10] uppercase tracking-wider">
-                  VISION
-                </h4>
-                <p className="text-[11px] text-[#211F1F]/80 font-light leading-snug">
-                  To be the most trusted transportation partner in Qatar.
+              <div className="space-y-3">
+                <span className="text-xs font-extrabold tracking-widest text-[#B87A5E] uppercase">
+                  LEADERSHIP
+                </span>
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-cormorant font-bold text-[#4A1A10] uppercase tracking-tight leading-tight">
+                  LEADERSHIP THAT DRIVES EXCELLENCE
+                </h2>
+                <p className="text-xs sm:text-sm text-[#211F1F]/80 font-light leading-relaxed">
+                  Our leadership reflects our commitment to safety, reliability and customer satisfaction. We continue to innovate and raise the standards of transportation in Qatar.
                 </p>
               </div>
 
-              {/* MISSION */}
-              <div className="bg-[#F9F1DC]/60 p-4 rounded-2xl border border-[#D0A769]/30 text-center space-y-2">
-                <div className="w-10 h-10 rounded-full bg-[#B87A5E]/15 mx-auto flex items-center justify-center">
-                  <Target className="w-5 h-5 text-[#B87A5E]" />
+              {/* Vision, Mission, Values 3 Columns */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 border-t border-[#D0A769]/30">
+                
+                {/* VISION */}
+                <div className="bg-[#F9F1DC]/60 p-4 rounded-2xl border border-[#D0A769]/30 text-center space-y-2">
+                  <div className="w-10 h-10 rounded-full bg-[#B87A5E]/15 mx-auto flex items-center justify-center">
+                    <Eye className="w-5 h-5 text-[#B87A5E]" />
+                  </div>
+                  <h4 className="font-extrabold text-xs text-[#4A1A10] uppercase tracking-wider">
+                    VISION
+                  </h4>
+                  <p className="text-[11px] text-[#211F1F]/80 font-light leading-snug">
+                    To be the most trusted transportation partner in Qatar.
+                  </p>
                 </div>
-                <h4 className="font-extrabold text-xs text-[#4A1A10] uppercase tracking-wider">
-                  MISSION
-                </h4>
-                <p className="text-[11px] text-[#211F1F]/80 font-light leading-snug">
-                  To deliver safe, reliable and efficient transportation solutions with a customer-first approach.
-                </p>
-              </div>
 
-              {/* VALUES */}
-              <div className="bg-[#F9F1DC]/60 p-4 rounded-2xl border border-[#D0A769]/30 text-center space-y-2">
-                <div className="w-10 h-10 rounded-full bg-[#B87A5E]/15 mx-auto flex items-center justify-center">
-                  <Gem className="w-5 h-5 text-[#B87A5E]" />
+                {/* MISSION */}
+                <div className="bg-[#F9F1DC]/60 p-4 rounded-2xl border border-[#D0A769]/30 text-center space-y-2">
+                  <div className="w-10 h-10 rounded-full bg-[#B87A5E]/15 mx-auto flex items-center justify-center">
+                    <Target className="w-5 h-5 text-[#B87A5E]" />
+                  </div>
+                  <h4 className="font-extrabold text-xs text-[#4A1A10] uppercase tracking-wider">
+                    MISSION
+                  </h4>
+                  <p className="text-[11px] text-[#211F1F]/80 font-light leading-snug">
+                    To deliver safe, reliable and efficient transportation solutions with a customer-first approach.
+                  </p>
                 </div>
-                <h4 className="font-extrabold text-xs text-[#4A1A10] uppercase tracking-wider">
-                  VALUES
-                </h4>
-                <ul className="text-[10px] text-[#211F1F]/80 font-medium space-y-0.5 text-left pl-3">
-                  <li>• Safety First</li>
-                  <li>• Reliability</li>
-                  <li>• Professionalism</li>
-                  <li>• Customer Satisfaction</li>
-                  <li>• Integrity</li>
-                </ul>
+
+                {/* VALUES */}
+                <div className="bg-[#F9F1DC]/60 p-4 rounded-2xl border border-[#D0A769]/30 text-center space-y-2">
+                  <div className="w-10 h-10 rounded-full bg-[#B87A5E]/15 mx-auto flex items-center justify-center">
+                    <Gem className="w-5 h-5 text-[#B87A5E]" />
+                  </div>
+                  <h4 className="font-extrabold text-xs text-[#4A1A10] uppercase tracking-wider">
+                    VALUES
+                  </h4>
+                  <ul className="text-[10px] text-[#211F1F]/80 font-medium space-y-0.5 text-left pl-3">
+                    <li>• Safety First</li>
+                    <li>• Reliability</li>
+                    <li>• Professionalism</li>
+                    <li>• Customer Satisfaction</li>
+                    <li>• Integrity</li>
+                  </ul>
+                </div>
+
               </div>
 
             </div>
 
           </div>
-
         </div>
       </section>
 
 
       {/* 4. MODERN FLEET. PROFESSIONAL OPERATIONS. (Full Width Background) */}
-      <section className="w-full bg-[#FFFBF2] py-12 lg:py-16 border-y border-[#D0A769]/30 mt-12 lg:mt-16">
+      <section className="w-full bg-[#FFFBF2] py-12 lg:py-16 border-b border-[#D0A769]/30">
         <div className="w-full max-w-[1700px] mx-auto px-4 sm:px-8 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
             
@@ -286,7 +288,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ setActivePage, onOpenBooki
 
 
       {/* 5. CALL TO ACTION BANNER (Full Width Background) */}
-      <section className="w-full bg-[#F9F1DC]/80 py-8 lg:py-10 border-b border-[#D0A769]/30 mt-12 lg:mt-16">
+      <section className="w-full bg-[#F9F1DC]/80 py-8 lg:py-10 border-b border-[#D0A769]/30">
         <div className="w-full max-w-[1700px] mx-auto px-4 sm:px-8 lg:px-12 flex flex-col sm:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-4">
             <div className="w-12 h-12 rounded-full bg-[#B87A5E]/20 flex items-center justify-center shrink-0">
