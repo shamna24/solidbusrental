@@ -9,9 +9,8 @@ interface AboutPageProps {
 
 export const AboutPage: React.FC<AboutPageProps> = ({ setActivePage, onOpenBooking }) => {
   return (
-    <div className="bg-[#F5E3CD] text-[#211F1F] font-montserrat min-h-screen pb-16 space-y-16">
+    <div className="bg-[#F5E3CD] text-[#211F1F] font-montserrat min-h-screen pb-16">
       
-      {/* 1. HERO SECTION matching exact design with enlarged HD bus artwork */}
       {/* 1. HERO SECTION matching exact design with full-height HD bus artwork */}
       <section className="relative border-b border-[#D0A769]/30 overflow-hidden bg-[#F5E3CD] py-0">
         <div className="w-full max-w-[1700px] mx-auto px-4 sm:px-8 lg:px-12">
@@ -48,8 +47,8 @@ export const AboutPage: React.FC<AboutPageProps> = ({ setActivePage, onOpenBooki
       </section>
 
 
-      {/* 2. OUR STORY: A JOURNEY BUILT ON DEPENDABILITY */}
-      <section className="w-full bg-[#FFFBF2] py-12 lg:py-16 border-y border-[#D0A769]/30">
+      {/* 2. OUR STORY: A JOURNEY BUILT ON DEPENDABILITY (Flush against Section 1) */}
+      <section className="w-full bg-[#FFFBF2] py-12 lg:py-16 border-b border-[#D0A769]/30">
         <div className="w-full max-w-[1700px] mx-auto px-4 sm:px-8 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
             
@@ -137,7 +136,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ setActivePage, onOpenBooki
 
 
       {/* 3. FOUNDER & MANAGING DIRECTOR + LEADERSHIP SECTION */}
-      <section className="w-full max-w-[1700px] mx-auto px-4 sm:px-8 lg:px-12">
+      <section className="w-full max-w-[1700px] mx-auto px-4 sm:px-8 lg:px-12 mt-12 lg:mt-16">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
           
           {/* Left Column: FOUNDER & MANAGING DIRECTOR */}
