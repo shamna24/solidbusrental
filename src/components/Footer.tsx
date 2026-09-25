@@ -5,10 +5,10 @@ import { Phone, Mail, MapPin } from 'lucide-react';
 
 interface FooterProps {
   setActivePage: (page: PageView) => void;
-  onOpenBooking: () => void;
+  onOpenBooking?: () => void;
 }
 
-export const Footer: React.FC<FooterProps> = ({ setActivePage, onOpenBooking }) => {
+export const Footer: React.FC<FooterProps> = ({ setActivePage }) => {
   return (
     <footer className="bg-[#171515] text-[#FFFBF2] border-t-4 border-[#B87A5E] relative overflow-hidden">
       {/* Decorative top pattern bar */}
@@ -86,15 +86,6 @@ export const Footer: React.FC<FooterProps> = ({ setActivePage, onOpenBooking }) 
                   </button>
                 </li>
               ))}
-              <li>
-                <button 
-                  onClick={onOpenBooking}
-                  className="hover:text-[#D0A769] transition-colors flex items-center gap-1.5 text-[#B87A5E] font-semibold"
-                >
-                  <span className="font-bold">›</span>
-                  <span>Book A Ride</span>
-                </button>
-              </li>
             </ul>
           </div>
 
