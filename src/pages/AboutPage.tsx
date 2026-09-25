@@ -243,10 +243,10 @@ export const AboutPage: React.FC<AboutPageProps> = ({ setActivePage, onOpenBooki
       </section>
 
 
-      {/* 4. MODERN FLEET. PROFESSIONAL OPERATIONS. */}
-      <section className="w-full max-w-[1700px] mx-auto px-4 sm:px-8 lg:px-12">
-        <div className="bg-[#FFFBF2] border border-[#D0A769]/40 rounded-[32px] p-6 sm:p-10 shadow-sm">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+      {/* 4. MODERN FLEET. PROFESSIONAL OPERATIONS. (Full Width Background) */}
+      <section className="w-full bg-[#FFFBF2] py-12 lg:py-16 border-y border-[#D0A769]/30 mt-12 lg:mt-16">
+        <div className="w-full max-w-[1700px] mx-auto px-4 sm:px-8 lg:px-12">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
             
             <div className="lg:col-span-5 space-y-4">
               <span className="text-xs font-extrabold tracking-widest text-[#B87A5E] uppercase">
@@ -255,7 +255,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ setActivePage, onOpenBooki
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-cormorant font-bold text-[#4A1A10] uppercase tracking-tight leading-tight">
                 MODERN FLEET.<br />PROFESSIONAL OPERATIONS.
               </h2>
-              <p className="text-xs sm:text-sm text-[#211F1F]/80 font-light leading-relaxed">
+              <p className="text-xs sm:text-sm lg:text-base text-[#211F1F]/80 font-light leading-relaxed">
                 We operate a well-maintained fleet of buses and vehicles suitable for all types of transportation needs. Our buses are equipped with modern amenities to ensure comfort, while our experienced team ensures smooth operations and on-time service.
               </p>
 
@@ -285,18 +285,18 @@ export const AboutPage: React.FC<AboutPageProps> = ({ setActivePage, onOpenBooki
       </section>
 
 
-      {/* 5. CALL TO ACTION BANNER */}
-      <section className="w-full max-w-[1700px] mx-auto px-4 sm:px-8 lg:px-12">
-        <div className="bg-[#F9F1DC]/80 border border-[#D0A769]/40 rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-sm">
+      {/* 5. CALL TO ACTION BANNER (Full Width Background) */}
+      <section className="w-full bg-[#F9F1DC]/80 py-8 lg:py-10 border-b border-[#D0A769]/30 mt-12 lg:mt-16">
+        <div className="w-full max-w-[1700px] mx-auto px-4 sm:px-8 lg:px-12 flex flex-col sm:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-4">
             <div className="w-12 h-12 rounded-full bg-[#B87A5E]/20 flex items-center justify-center shrink-0">
               <Phone className="w-6 h-6 text-[#B87A5E]" />
             </div>
             <div>
-              <h3 className="text-lg sm:text-xl font-cormorant font-bold text-[#4A1A10]">
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-cormorant font-bold text-[#4A1A10]">
                 Have questions or need transportation for your school or company?
               </h3>
-              <p className="text-xs text-[#211F1F]/70 font-light mt-0.5">
+              <p className="text-xs sm:text-sm text-[#211F1F]/70 font-light mt-0.5">
                 Let's talk. We're here to help you move forward.
               </p>
             </div>
