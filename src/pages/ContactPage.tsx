@@ -41,7 +41,7 @@ export const ContactPage: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
           
           {/* Left Cards */}
-          <div className="lg:col-span-5 space-y-4">
+          <div className="lg:col-span-5 space-y-4 order-2 lg:order-1">
             
             {/* Phone Card */}
             <div className="bg-[#FFFBF2] border border-[#D0A769]/40 rounded-2xl p-5 flex items-start gap-4 shadow-2xs hover:border-[#B87A5E] transition-colors">
@@ -118,7 +118,7 @@ export const ContactPage: React.FC = () => {
           </div>
 
           {/* Right Contact Form matching Page 10 */}
-          <div className="lg:col-span-7 bg-[#FFFBF2] border-2 border-[#D0A769]/40 rounded-3xl p-6 sm:p-10 shadow-lg">
+          <div className="lg:col-span-7 bg-[#FFFBF2] border-2 border-[#D0A769]/40 rounded-3xl p-6 sm:p-10 shadow-lg order-1 lg:order-2">
             
             <div className="mb-6 space-y-1">
               <h2 className="text-3xl font-cormorant font-bold text-[#4A1A10]">
