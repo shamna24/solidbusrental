@@ -15,7 +15,8 @@
   --font-cormorant: 'Cormorant Garamond', serif;
   --font-dmserif: 'DM Serif Display', serif;
   --font-montserrat: 'Montserrat', sans-serif;
-  --font-script: 'Alex Brush', 'Playfair Display', cursive;
+  --font-script: 'Great Vibes', 'Alex Brush', cursive;
+  --font-handwritten: 'Dancing Script', 'Satisfy', cursive;
 }
 
 @layer utilities {
@@ -30,6 +31,9 @@
   }
   .font-script {
     font-family: var(--font-script);
+  }
+  .font-handwritten {
+    font-family: var(--font-handwritten);
   }
 }
 
