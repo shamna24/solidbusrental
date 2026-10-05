@@ -49,6 +49,7 @@ export const App: React.FC = () => {
             setActivePage={setActivePage}
             onOpenBooking={() => handleOpenBooking()}
             onSelectVehicle={(vId) => handleOpenBooking(vId)}
+            onSelectCategory={handleSelectCategory}
           />
         )}
 

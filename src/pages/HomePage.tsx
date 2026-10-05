@@ -111,7 +111,7 @@ export const HomePage: React.FC<HomePageProps> = ({ setActivePage, onOpenBooking
             <div className="pt-3">
               <button
                 onClick={() => {
-                  onSelectVehicle('toyota-land-cruiser');
+                  onSelectCategory?.('car');
                   setActivePage('fleet');
                 }}
                 className="inline-flex items-center gap-1 text-xs sm:text-sm font-bold tracking-wider text-[#4A1A10] hover:text-[#B87A5E] transition-colors uppercase cursor-pointer"
@@ -180,7 +180,7 @@ export const HomePage: React.FC<HomePageProps> = ({ setActivePage, onOpenBooking
             <div className="pt-3">
               <button
                 onClick={() => {
-                  onSelectVehicle('volvo-9600');
+                  onSelectVehicle('24-seater-foton-mini-bus');
                   setActivePage('fleet');
                 }}
                 className="inline-flex items-center gap-1 text-xs sm:text-sm font-bold tracking-wider text-[#4A1A10] hover:text-[#B87A5E] transition-colors uppercase cursor-pointer"
