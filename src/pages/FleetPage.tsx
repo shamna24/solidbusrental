@@ -134,7 +134,7 @@ export const FleetPage: React.FC<FleetPageProps> = ({ initialCategory = 'all', o
                       src={vehicle.image}
                       alt={vehicle.name}
                       className="relative z-10 max-h-40 w-auto object-contain drop-shadow-xl transition-transform duration-500 group-hover:scale-105"
-                      style={vehicle.image.endsWith('.jpg') ? { mixBlendMode: 'multiply' } : {}}
+                      style={{ mixBlendMode: 'multiply' }}
                     />
                   </div>
 

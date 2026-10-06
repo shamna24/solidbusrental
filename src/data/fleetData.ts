@@ -151,8 +151,8 @@ export const FLEET_DATA: Vehicle[] = [
     categoryLabel: 'Category B - Luxury SUV',
     subtitle: 'Luxury Comfort Class',
     image: '/home_assets/fleet_land_cruiser_hd.png',
-    accentColor: '#D0A769',
-    bgArchColor: 'bg-[#D0A769]',
+    accentColor: '#4A1A10',
+    bgArchColor: 'bg-[#4A1A10]',
     engineSpecs: {
       type: '3.5L Twin-Turbo V6 Gasoline',
       displacement: '3445 cc',
