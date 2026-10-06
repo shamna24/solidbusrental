@@ -12,6 +12,29 @@ interface HomePageProps {
 
 export const HomePage: React.FC<HomePageProps> = ({ setActivePage, onOpenBooking, onSelectVehicle }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [touchStart, setTouchStart] = useState<number | null>(null);
+  const [touchEnd, setTouchEnd] = useState<number | null>(null);
+
+  const minSwipeDistance = 40;
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    const distance = touchStart - touchEnd;
+    if (distance > minSwipeDistance) {
+      setCurrentSlide((prev) => (prev === FLEET_SLIDES.length - 1 ? 0 : prev + 1));
+    } else if (distance < -minSwipeDistance) {
+      setCurrentSlide((prev) => (prev === 0 ? FLEET_SLIDES.length - 1 : prev - 1));
+    }
+  };
 
   const FLEET_SLIDES = [
     // Slide 1: Buses
@@ -190,7 +213,12 @@ export const HomePage: React.FC<HomePageProps> = ({ setActivePage, onOpenBooking
           </button>
 
           {/* Animated Vehicles Grid (NO Cards, NO Boxes, NO Backgrounds) */}
-          <div className="overflow-hidden py-4 min-h-[380px] flex items-center">
+          <div 
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+            className="overflow-hidden py-4 min-h-[340px] sm:min-h-[380px] flex items-center select-none"
+          >
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentSlide}
