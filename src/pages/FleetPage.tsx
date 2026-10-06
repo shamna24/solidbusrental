@@ -109,7 +109,7 @@ export const FleetPage: React.FC<FleetPageProps> = ({ initialCategory = 'all', o
             </button>
           </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="flex flex-wrap justify-center gap-6 max-w-7xl mx-auto">
             {filteredFleet.map((vehicle) => (
               <div
                 key={vehicle.id}
@@ -117,7 +117,7 @@ export const FleetPage: React.FC<FleetPageProps> = ({ initialCategory = 'all', o
                   onSelectVehicle(vehicle.id);
                   onOpenBooking();
                 }}
-                className="bg-[#FFFBF7] border border-[#E5DEC9]/70 rounded-[32px] p-4 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between relative group cursor-pointer"
+                className="w-full sm:w-[calc(50%-16px)] lg:w-[calc(25%-18px)] min-w-[270px] max-w-[320px] bg-[#FFFBF7] border border-[#E5DEC9]/70 rounded-[32px] p-4 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between relative group cursor-pointer"
               >
                 <div>
                   
