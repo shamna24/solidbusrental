@@ -69,7 +69,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose, pre
               src={vehicle.image}
               alt={vehicle.name}
               className="relative z-10 max-h-36 w-auto object-contain drop-shadow-xl"
-              style={{ mixBlendMode: 'multiply' }}
+              style={vehicle.image.endsWith('.jpg') ? { mixBlendMode: 'multiply' } : {}}
             />
           </div>
 

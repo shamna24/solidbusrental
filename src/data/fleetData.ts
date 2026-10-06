@@ -151,8 +151,8 @@ export const FLEET_DATA: Vehicle[] = [
     categoryLabel: 'Category B - Luxury SUV',
     subtitle: 'Luxury Comfort Class',
     image: '/home_assets/fleet_land_cruiser_hd.png',
-    accentColor: '#4A1A10',
-    bgArchColor: 'bg-[#4A1A10]',
+    accentColor: '#D0A769',
+    bgArchColor: 'bg-[#D0A769]',
     engineSpecs: {
       type: '3.5L Twin-Turbo V6 Gasoline',
       displacement: '3445 cc',
@@ -351,29 +351,6 @@ export const FLEET_DATA: Vehicle[] = [
       safetyRating: 'Toyota Safety Sense & 4WD Lock',
     },
     description: 'Renowned worldwide for extreme durability and 4x4 capability, ideal for site operations, field logistics, and executive utility travel.',
-  },
-  {
-    id: 'heavy-ton-truck',
-    name: 'HEAVY TON TRUCK',
-    year: '2024',
-    category: 'pickup',
-    categoryLabel: 'Category C - Commercial',
-    subtitle: 'Industrial Site & Heavy Transport',
-    image: '/home_assets/showcase/ton_heavy_truck.png',
-    accentColor: '#B87A5E',
-    bgArchColor: 'bg-[#B87A5E]',
-    engineSpecs: {
-      type: '6.7L Turbocharged Commercial Diesel',
-      displacement: '6.7L',
-      horsepower: '280 HP',
-    },
-    features: {
-      seats: 3,
-      transmission: '6-Speed Heavy Duty Manual',
-      ac: true,
-      safetyRating: 'Pneumatic Air Brakes & Reinforced Frame',
-    },
-    description: 'Heavy commercial logistics truck engineered for high payload equipment, site transport, and long-distance cargo movement in Qatar.',
   },
 ];
 
