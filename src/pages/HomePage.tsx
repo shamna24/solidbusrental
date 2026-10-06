@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import type { PageView } from '../types';
-import { ArrowRight, ShieldCheck, Bus, Timer, Users } from 'lucide-react';
+import { ArrowRight, ShieldCheck, Bus, Timer, Users, ChevronLeft, ChevronRight } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 interface HomePageProps {
   setActivePage: (page: PageView) => void;
@@ -9,7 +10,89 @@ interface HomePageProps {
   onSelectCategory?: (category: 'bus' | 'car' | 'pickup') => void;
 }
 
-export const HomePage: React.FC<HomePageProps> = ({ setActivePage, onOpenBooking, onSelectVehicle, onSelectCategory }) => {
+export const HomePage: React.FC<HomePageProps> = ({ setActivePage, onOpenBooking, onSelectVehicle }) => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const FLEET_SLIDES = [
+    // Slide 1: Buses
+    {
+      id: 'buses',
+      category: 'bus',
+      title: 'Buses Showcase',
+      vehicles: [
+        {
+          id: '45-seater-foton-bus',
+          name: 'FOTON BUS',
+          subtitle: 'Executive Intercity Coach',
+          image: '/home_assets/showcase/foton_bus.png',
+        },
+        {
+          id: '28-seater-zhongtong',
+          name: 'ZHONGTONG BUS',
+          subtitle: 'Executive Coaster Midibus',
+          image: '/home_assets/showcase/zhongtong_bus.png',
+        },
+        {
+          id: 'coaster-bus',
+          name: 'COASTER BUS',
+          subtitle: 'Group Travel Made Easy',
+          image: '/home_assets/fleet_coaster_hd.png',
+        },
+      ],
+    },
+    // Slide 2: Pickup Vehicles
+    {
+      id: 'pickups',
+      category: 'pickup',
+      title: 'Pickup Vehicles',
+      vehicles: [
+        {
+          id: 'hilux-pickup',
+          name: 'HILUX PICKUP',
+          subtitle: 'Double Cab 4x4 Utility',
+          image: '/home_assets/showcase/hilux_pickup.png',
+        },
+        {
+          id: '3-ton-pickup',
+          name: '3 TON PICKUP',
+          subtitle: 'Heavy-Duty Cargo Transport',
+          image: '/home_assets/fleet_pickup_v10.png',
+        },
+        {
+          id: '1-ton-pickup',
+          name: '1 TON PICKUP',
+          subtitle: 'Agile Urban Deliveries',
+          image: '/home_assets/showcase/ton_1_pickup.png',
+        },
+      ],
+    },
+    // Slide 4: Cars (ALL CARS MUST BE BLACK!)
+    {
+      id: 'cars',
+      category: 'car',
+      title: 'Cars Showcase',
+      vehicles: [
+        {
+          id: 'land-cruiser',
+          name: 'LAND CRUISER',
+          subtitle: 'Luxury Comfort Class',
+          image: '/home_assets/fleet_land_cruiser_hd.png',
+        },
+        {
+          id: 'kia-seltos',
+          name: 'KIA SELTOS',
+          subtitle: 'Spacious Urban Crossover',
+          image: '/home_assets/showcase/kia_seltos_black.png',
+        },
+        {
+          id: 'geely-emgrand',
+          name: 'GEELY EMGRAND',
+          subtitle: 'Modern Style & Smooth Efficiency',
+          image: '/home_assets/showcase/geely_emgrand_black.png',
+        },
+      ],
+    },
+  ];
 
   return (
     <div className="bg-[#F5E3CD] text-[#211F1F] font-montserrat">
@@ -69,7 +152,7 @@ export const HomePage: React.FC<HomePageProps> = ({ setActivePage, onOpenBooking
       </section>
 
 
-      {/* 2. OUR FLEET SECTION matching screenshot design */}
+      {/* 2. OUR FLEET SECTION - 3D Showcase Slider */}
       <section className="py-16 sm:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="text-center space-y-2 mb-12 sm:mb-16">
@@ -85,119 +168,102 @@ export const HomePage: React.FC<HomePageProps> = ({ setActivePage, onOpenBooking
           </p>
         </div>
 
-        {/* 3 Columns Row - Vehicle Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 max-w-6xl mx-auto">
+        {/* 3D Fleet Showcase Slider Container */}
+        <div className="relative max-w-6xl mx-auto px-2 sm:px-8">
           
-          {/* Column 1: LAND CRUISER */}
-          <div className="p-4 text-center space-y-4 flex flex-col justify-between group">
-            <div className="space-y-4">
-              <div className="h-52 sm:h-60 flex items-center justify-center relative w-full">
-                <img
-                  src="/home_assets/fleet_land_cruiser_hd.png?v=5"
-                  alt="Land Cruiser"
-                  className="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-              <div>
-                <h3 className="font-dmserif text-xl sm:text-2xl font-bold text-[#4A1A10] uppercase tracking-wider">
-                  LAND CRUISER
-                </h3>
-                <p className="text-xs sm:text-sm text-[#9E826F] font-light mt-1">
-                  Luxury Comfort Class
-                </p>
-              </div>
-            </div>
+          {/* Previous Slide Chevron Button */}
+          <button
+            onClick={() => setCurrentSlide((prev) => (prev === 0 ? FLEET_SLIDES.length - 1 : prev - 1))}
+            className="absolute -left-3 sm:-left-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-[#4A1A10]/10 hover:bg-[#4A1A10] text-[#4A1A10] hover:text-white flex items-center justify-center transition-all cursor-pointer shadow-sm hover:scale-110"
+            aria-label="Previous Slide"
+          >
+            <ChevronLeft className="w-6 h-6" />
+          </button>
 
-            <div className="pt-3">
-              <button
-                onClick={() => {
-                  onSelectCategory?.('car');
-                  setActivePage('fleet');
-                }}
-                className="inline-flex items-center gap-1 text-xs sm:text-sm font-bold tracking-wider text-[#4A1A10] hover:text-[#B87A5E] transition-colors uppercase cursor-pointer"
+          {/* Next Slide Chevron Button */}
+          <button
+            onClick={() => setCurrentSlide((prev) => (prev === FLEET_SLIDES.length - 1 ? 0 : prev + 1))}
+            className="absolute -right-3 sm:-right-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-[#4A1A10]/10 hover:bg-[#4A1A10] text-[#4A1A10] hover:text-white flex items-center justify-center transition-all cursor-pointer shadow-sm hover:scale-110"
+            aria-label="Next Slide"
+          >
+            <ChevronRight className="w-6 h-6" />
+          </button>
+
+          {/* Animated Vehicles Grid (NO Cards, NO Boxes, NO Backgrounds) */}
+          <div className="overflow-hidden py-4 min-h-[380px] flex items-center">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={currentSlide}
+                initial={{ opacity: 0, x: 40 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -40 }}
+                transition={{ duration: 0.4, ease: 'easeInOut' }}
+                className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 w-full"
               >
-                <span className="border-b border-[#4A1A10] pb-0.5">VIEW DETAILS</span>
-                <ArrowRight className="w-3.5 h-3.5 ml-1" />
-              </button>
-            </div>
+                {FLEET_SLIDES[currentSlide].vehicles.map((v) => (
+                  <div
+                    key={v.name}
+                    className="text-center space-y-4 flex flex-col justify-between group cursor-pointer"
+                    onClick={() => {
+                      onSelectVehicle(v.id);
+                    }}
+                  >
+                    <div className="space-y-4">
+                      {/* Vehicle Cutout sitting directly on Warm Cream Background */}
+                      <div className="h-52 sm:h-60 flex items-center justify-center relative w-full px-2">
+                        <img
+                          src={v.image}
+                          alt={v.name}
+                          className="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-500 drop-shadow-xl"
+                        />
+                      </div>
+
+                      <div>
+                        <h3 className="font-dmserif text-xl sm:text-2xl font-bold text-[#4A1A10] uppercase tracking-wider">
+                          {v.name}
+                        </h3>
+                        <p className="text-xs sm:text-sm text-[#9E826F] font-light mt-1">
+                          {v.subtitle}
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="pt-3">
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          onSelectVehicle(v.id);
+                        }}
+                        className="inline-flex items-center gap-1 text-xs sm:text-sm font-bold tracking-wider text-[#4A1A10] hover:text-[#B87A5E] transition-colors uppercase cursor-pointer"
+                      >
+                        <span className="border-b border-[#4A1A10] pb-0.5">VIEW DETAILS</span>
+                        <ArrowRight className="w-3.5 h-3.5 ml-1" />
+                      </button>
+                    </div>
+
+                  </div>
+                ))}
+              </motion.div>
+            </AnimatePresence>
           </div>
 
-          {/* Column 2: 3 TON PICKUP */}
-          <div className="p-4 text-center space-y-4 flex flex-col justify-between group">
-            <div className="space-y-4">
-              <div className="h-52 sm:h-60 flex items-center justify-center relative w-full">
-                <img
-                  src="/home_assets/fleet_pickup_v10.png?v=10"
-                  alt="3 Ton Pickup"
-                  className="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-              <div>
-                <h3 className="font-dmserif text-xl sm:text-2xl font-bold text-[#4A1A10] uppercase tracking-wider">
-                  3 TON PICKUP
-                </h3>
-                <p className="text-xs sm:text-sm text-[#9E826F] font-light mt-1">
-                  Strong Reliable Efficient
-                </p>
-              </div>
-            </div>
-
-            <div className="pt-3">
+          {/* Slider Navigation Dots */}
+          <div className="flex items-center justify-center gap-3 mt-10 sm:mt-14">
+            {FLEET_SLIDES.map((slide, idx) => (
               <button
-                onClick={() => {
-                  onSelectCategory?.('pickup');
-                  setActivePage('fleet');
-                }}
-                className="inline-flex items-center gap-1 text-xs sm:text-sm font-bold tracking-wider text-[#4A1A10] hover:text-[#B87A5E] transition-colors uppercase cursor-pointer"
-              >
-                <span className="border-b border-[#4A1A10] pb-0.5">VIEW DETAILS</span>
-                <ArrowRight className="w-3.5 h-3.5 ml-1" />
-              </button>
-            </div>
-
+                key={slide.id}
+                onClick={() => setCurrentSlide(idx)}
+                className={`transition-all duration-300 rounded-full cursor-pointer ${
+                  currentSlide === idx
+                    ? 'w-8 h-2.5 bg-[#B87A5E]'
+                    : 'w-2.5 h-2.5 bg-[#E5D5C6] hover:bg-[#B87A5E]/60'
+                }`}
+                title={slide.title}
+                aria-label={`Go to slide ${idx + 1}: ${slide.title}`}
+              />
+            ))}
           </div>
 
-          {/* Column 3: COASTER BUS */}
-          <div className="p-4 text-center space-y-4 flex flex-col justify-between group">
-            <div className="space-y-4">
-              <div className="h-52 sm:h-60 flex items-center justify-center relative w-full">
-                <img
-                  src="/home_assets/fleet_coaster_hd.png?v=5"
-                  alt="Coaster Bus"
-                  className="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-              <div>
-                <h3 className="font-dmserif text-xl sm:text-2xl font-bold text-[#4A1A10] uppercase tracking-wider">
-                  COASTER BUS
-                </h3>
-                <p className="text-xs sm:text-sm text-[#9E826F] font-light mt-1">
-                  Group Travel Made Easy
-                </p>
-              </div>
-            </div>
-
-            <div className="pt-3">
-              <button
-                onClick={() => {
-                  onSelectVehicle('24-seater-foton-mini-bus');
-                  setActivePage('fleet');
-                }}
-                className="inline-flex items-center gap-1 text-xs sm:text-sm font-bold tracking-wider text-[#4A1A10] hover:text-[#B87A5E] transition-colors uppercase cursor-pointer"
-              >
-                <span className="border-b border-[#4A1A10] pb-0.5">VIEW DETAILS</span>
-                <ArrowRight className="w-3.5 h-3.5 ml-1" />
-              </button>
-            </div>
-          </div>
-
-        </div>
-
-        {/* Carousel Dots */}
-        <div className="flex items-center justify-center gap-3 mt-12 sm:mt-16">
-          <span className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-[#B87A5E]" />
-          <span className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-[#E5D5C6]" />
-          <span className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-[#E5D5C6]" />
         </div>
 
       </section>

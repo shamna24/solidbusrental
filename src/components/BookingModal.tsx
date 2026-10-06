@@ -15,10 +15,10 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose, pre
   const [details, setDetails] = useState('');
 
   useEffect(() => {
-    if (preselectedVehicleId) {
+    if (isOpen && preselectedVehicleId) {
       setSelectedVehicleId(preselectedVehicleId);
     }
-  }, [preselectedVehicleId]);
+  }, [isOpen, preselectedVehicleId]);
 
   if (!isOpen) return null;
 
@@ -78,9 +78,6 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose, pre
             <div className="flex items-center justify-between gap-2">
               <span className="text-[10px] font-extrabold uppercase tracking-widest text-[#B87A5E] bg-[#F5E6CD]/60 px-2.5 py-0.5 rounded-full">
                 {vehicle.categoryLabel}
-              </span>
-              <span className="text-xs font-bold text-[#4A1A10]">
-                {vehicle.year} Model
               </span>
             </div>
 

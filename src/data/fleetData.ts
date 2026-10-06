@@ -96,6 +96,29 @@ export const FLEET_DATA: Vehicle[] = [
     description: 'Sophisticated 28-seater Zhongtong midibus offering premium comfort for corporate delegations, hotel shuttles, and airport group transfers.',
   },
   {
+    id: 'coaster-bus',
+    name: 'COASTER BUS',
+    year: '2024',
+    category: 'bus',
+    categoryLabel: 'Category A - Bus',
+    subtitle: 'Group Travel Made Easy',
+    image: '/home_assets/fleet_coaster_hd.png',
+    accentColor: '#9E8B7A',
+    bgArchColor: 'bg-[#9E8B7A]',
+    engineSpecs: {
+      type: 'Toyota 4.0L 4-Cylinder Turbo Diesel',
+      displacement: '4.0L',
+      horsepower: '150 HP',
+    },
+    features: {
+      seats: 24,
+      luggage: 'Rear Storage Hold & Overhead Racks',
+      ac: true,
+      safetyRating: 'ABS & Dual Airbags',
+    },
+    description: 'Executive 24-seater Coaster bus engineered for comfortable group travel, city tours, team outings, and event transfers in Qatar.',
+  },
+  {
     id: '24-seater-foton-mini-bus',
     name: '24 SEATER FOTON MINI BUS',
     year: '2024',
@@ -120,6 +143,29 @@ export const FLEET_DATA: Vehicle[] = [
   },
 
   // CARS / LUXURY FLEET (Category B)
+  {
+    id: 'land-cruiser',
+    name: 'LAND CRUISER',
+    year: '2024',
+    category: 'car',
+    categoryLabel: 'Category B - Luxury SUV',
+    subtitle: 'Luxury Comfort Class',
+    image: '/home_assets/fleet_land_cruiser_hd.png',
+    accentColor: '#4A1A10',
+    bgArchColor: 'bg-[#4A1A10]',
+    engineSpecs: {
+      type: '3.5L Twin-Turbo V6 Gasoline',
+      displacement: '3445 cc',
+      horsepower: '409 HP',
+    },
+    features: {
+      seats: 7,
+      transmission: '10-Speed Automatic 4WD',
+      ac: true,
+      safetyRating: 'Toyota Safety Sense 3.0 & 10 Airbags',
+    },
+    description: 'Flagship 7-seater luxury 4WD SUV offering unmatched executive comfort, terrain capability, and premium leather interior in Qatar.',
+  },
   {
     id: 'geely-emgrand',
     name: 'GEELY EMGRAND',
@@ -305,6 +351,29 @@ export const FLEET_DATA: Vehicle[] = [
       safetyRating: 'Toyota Safety Sense & 4WD Lock',
     },
     description: 'Renowned worldwide for extreme durability and 4x4 capability, ideal for site operations, field logistics, and executive utility travel.',
+  },
+  {
+    id: 'heavy-ton-truck',
+    name: 'HEAVY TON TRUCK',
+    year: '2024',
+    category: 'pickup',
+    categoryLabel: 'Category C - Commercial',
+    subtitle: 'Industrial Site & Heavy Transport',
+    image: '/home_assets/showcase/ton_heavy_truck.png',
+    accentColor: '#B87A5E',
+    bgArchColor: 'bg-[#B87A5E]',
+    engineSpecs: {
+      type: '6.7L Turbocharged Commercial Diesel',
+      displacement: '6.7L',
+      horsepower: '280 HP',
+    },
+    features: {
+      seats: 3,
+      transmission: '6-Speed Heavy Duty Manual',
+      ac: true,
+      safetyRating: 'Pneumatic Air Brakes & Reinforced Frame',
+    },
+    description: 'Heavy commercial logistics truck engineered for high payload equipment, site transport, and long-distance cargo movement in Qatar.',
   },
 ];
 
