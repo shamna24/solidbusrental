@@ -163,7 +163,7 @@ export const HomePage: React.FC<HomePageProps> = ({ setActivePage, onOpenBooking
             <div className="lg:col-span-6 flex justify-center lg:justify-end">
               <div className="relative w-full max-w-[760px] lg:max-w-none group">
                 <img
-                  src="/home_assets/hero_bus_art.png"
+                  src="/home_assets/hero_bus_art_full_no_badge.png"
                   alt="Solid Bus Rental Qatar Coach & Arch Visual"
                   className="w-full h-auto object-contain filter drop-shadow-[0_16px_32px_rgba(74,26,16,0.18)] transition-all duration-500 group-hover:scale-[1.015]"
                 />
