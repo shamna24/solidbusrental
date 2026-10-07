@@ -354,7 +354,7 @@ export const HomePage: React.FC<HomePageProps> = ({ setActivePage, onOpenBooking
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
           
           {/* Left School Bus Image aligned flush left with full wide arch */}
-          <div className="lg:col-span-6 flex justify-center lg:justify-start -ml-4 sm:-ml-8 lg:-ml-12 xl:-ml-16 -mt-4 lg:-mt-8">
+          <div className="lg:col-span-6 flex justify-center lg:justify-start -ml-4 sm:-ml-8 lg:-ml-12 xl:-ml-16 -mt-10 lg:-mt-16">
             <div className="w-full relative group max-w-[780px]">
               <img
                 src="/home_assets/school_bus_perfect_hd.png"
