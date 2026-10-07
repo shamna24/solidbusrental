@@ -304,13 +304,9 @@ export const HomePage: React.FC<HomePageProps> = ({ setActivePage, onOpenBooking
           {/* Left Vertical Stamp & Brief */}
           <div className="lg:col-span-5 flex items-start gap-6">
             
-            {/* EST 2022 Stack */}
+            {/* Vertical Tag */}
             <div className="flex flex-col text-xs sm:text-sm font-extrabold text-[#4A1A10] tracking-widest leading-snug shrink-0 space-y-1.5 pr-6 border-r-2 border-[#D0A769]/50">
-              <span>EST.</span>
-              <span className="text-2xl font-cormorant font-bold">20</span>
-              <span className="text-2xl font-cormorant font-bold">22</span>
-              <span>.</span>
-              <span className="text-xs font-bold text-[#B87A5E] uppercase mt-2">TRAVEL</span>
+              <span className="text-xs font-bold text-[#B87A5E] uppercase">TRAVEL</span>
               <span className="text-xs font-bold text-[#B87A5E] uppercase">TOGETHER</span>
               <span className="text-xs font-bold text-[#B87A5E] uppercase">SAFELY</span>
             </div>
