@@ -488,7 +488,7 @@ export const HomePage: React.FC<HomePageProps> = ({ setActivePage, onOpenBooking
 
             <div className="pt-4 lg:pt-0 px-3 space-y-1">
               <div className="text-3xl sm:text-4xl font-cormorant font-bold text-[#D0A769]">500+</div>
-              <h4 className="text-xs font-bold uppercase tracking-wider text-white">Buses in Fleet</h4>
+              <h4 className="text-xs font-bold uppercase tracking-wider text-white">Fleets in Fleet</h4>
               <p className="text-[10px] text-white/70 font-light">Modern, well-maintained and air-conditioned.</p>
             </div>
 
