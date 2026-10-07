@@ -99,7 +99,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ setActivePage, onOpenBooki
                 <div className="flex flex-col items-center text-center space-y-1.5 p-3 bg-[#F9F1DC]/70 rounded-xl border border-[#D0A769]/30">
                   <div className="flex items-center gap-1">
                     <Bus className="w-5 h-5 text-[#B87A5E]" />
-                    <span className="text-2xl font-cormorant font-bold text-[#4A1A10]">100+</span>
+                    <span className="text-2xl font-cormorant font-bold text-[#4A1A10]">500+</span>
                   </div>
                   <span className="text-[10px] font-bold uppercase tracking-wider text-[#211F1F]/80">
                     BUSES IN FLEET

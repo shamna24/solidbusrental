@@ -49,7 +49,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ setActivePage, onSel
             
             <div className="pt-2 md:pt-0 px-6 space-y-1">
               <span className="text-xs font-extrabold uppercase tracking-widest text-[#4A1A10]">FLEET STRENGTH</span>
-              <div className="text-4xl sm:text-5xl font-cormorant font-bold text-[#4A1A10]">400+</div>
+              <div className="text-4xl sm:text-5xl font-cormorant font-bold text-[#4A1A10]">500+</div>
               <p className="text-xs text-[#3A2A20]/80 uppercase font-bold tracking-wider">VEHICLES</p>
             </div>
 

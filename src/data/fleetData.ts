@@ -422,7 +422,7 @@ export const SERVICES_LIST = [
 
 export const COMPANY_STATS = [
   { label: 'Years of Experience', value: '15+', subtext: 'Delivering trusted solutions across Qatar.' },
-  { label: 'Buses in Fleet', value: '100+', subtext: 'Modern, well-maintained and air-conditioned.' },
+  { label: 'Buses in Fleet', value: '500+', subtext: 'Modern, well-maintained and air-conditioned.' },
   { label: 'Happy Clients', value: '500+', subtext: 'Businesses, schools and institutions trust us.' },
   { label: 'Safety Commitment', value: '100%', subtext: 'Safety is our promise, every single day.' }
 ];
