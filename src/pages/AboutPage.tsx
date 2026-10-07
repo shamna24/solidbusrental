@@ -53,7 +53,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ setActivePage, onOpenBooki
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
             
             {/* Left Fleet Line Image */}
-            <div className="lg:col-span-5">
+            <div className="lg:col-span-5 order-2 lg:order-1">
               <div className="rounded-[28px] overflow-hidden border border-[#D0A769]/30 shadow-md">
                 <img
                   src="/home_assets/about_fleet_line.png"
@@ -64,7 +64,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ setActivePage, onOpenBooki
             </div>
 
             {/* Right Story Content */}
-            <div className="lg:col-span-7 space-y-6">
+            <div className="lg:col-span-7 space-y-6 order-1 lg:order-2">
               <div className="space-y-2">
                 <span className="text-xs font-extrabold tracking-widest text-[#B87A5E] uppercase">
                   OUR STORY
