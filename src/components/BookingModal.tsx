@@ -30,7 +30,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose, pre
       msg += `\n\n*Requirement / Dates:*\n${details.trim()}`;
     }
     msg += `\n\nPlease share availability, pricing, and rental terms. Thank you!`;
-    return `https://wa.me/97450842662?text=${encodeURIComponent(msg)}`;
+    return `https://wa.me/97466673348?text=${encodeURIComponent(msg)}`;
   };
 
   return (
@@ -162,11 +162,11 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose, pre
 
           {/* Secondary Direct Call Button */}
           <a
-            href="tel:+97450842662"
+            href="tel:+97444657708"
             className="w-full py-2.5 px-4 rounded-xl bg-transparent hover:bg-[#F5E6CD]/60 text-[#4A1A10] border border-[#D0A769]/50 font-bold text-xs uppercase tracking-wider transition-colors flex items-center justify-center gap-2"
           >
             <Phone className="w-3.5 h-3.5 text-[#B87A5E]" />
-            <span>Call 24/7 Helpline: +974 5084 2662</span>
+            <span>Call 24/7 Helpline: +974 4465 7708</span>
           </a>
         </div>
 

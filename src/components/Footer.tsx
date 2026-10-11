@@ -57,7 +57,7 @@ export const Footer: React.FC<FooterProps> = ({ setActivePage }) => {
                 <svg className="w-4 h-4 fill-current text-[#FFFBF2]" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
               </a>
               <a 
-                href="https://wa.me/97450842662" target="_blank" rel="noreferrer"
+                href="https://wa.me/97466673348" target="_blank" rel="noreferrer"
                 className="w-8 h-8 rounded-full bg-[#211F1F] border border-[#D0A769]/30 flex items-center justify-center hover:bg-[#25D366] hover:border-[#25D366] transition-colors"
                 aria-label="WhatsApp"
               >
@@ -109,7 +109,7 @@ export const Footer: React.FC<FooterProps> = ({ setActivePage }) => {
             <ul className="space-y-3 text-xs text-[#FFFBF2]/80">
               <li className="flex items-start gap-3">
                 <Phone className="w-4 h-4 text-[#D0A769] shrink-0 mt-0.5" />
-                <span>+974 5084 2662</span>
+                <span>+974 4465 7708</span>
               </li>
               <li className="flex items-start gap-3">
                 <Mail className="w-4 h-4 text-[#D0A769] shrink-0 mt-0.5" />
@@ -137,7 +137,7 @@ export const Footer: React.FC<FooterProps> = ({ setActivePage }) => {
 
       {/* Floating WhatsApp Action Icon matching Page 4/9/10 screenshot */}
       <a
-        href="https://wa.me/97450842662?text=Hello%20Solid%20Bus%20Rental%2C%20I%20would%20like%20to%20inquire%20about%20bus%20rentals."
+        href="https://wa.me/97466673348?text=Hello%20Solid%20Bus%20Rental%2C%20I%20would%20like%20to%20inquire%20about%20bus%20rentals."
         target="_blank"
         rel="noreferrer"
         className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 w-12 h-12 sm:w-14 sm:h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-all duration-300 group"
