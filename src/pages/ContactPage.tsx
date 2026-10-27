@@ -19,7 +19,7 @@ export const ContactPage: React.FC = () => {
     setIsSubmitting(true);
     setErrorMessage(null);
 
-    const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY || 'fd7ba6dd-a650-4a6e-899e-b347c6c0e0c0';
+    const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY || 'ab17277d-a482-486f-b9c9-db919202b68e';
 
     if (!accessKey) {
       console.warn('Web3Forms Access Key is not configured. Simulating successful submission.');
