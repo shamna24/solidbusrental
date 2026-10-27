@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { Phone, Mail, MapPin, Clock, Send, Headset, CheckCircle2 } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Send, Headset, CheckCircle2, Loader2, AlertCircle } from 'lucide-react';
 import type { ContactMessage } from '../types';
-
 
 export const ContactPage: React.FC = () => {
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [formData, setFormData] = useState<ContactMessage>({
     fullName: '',
     email: '',
@@ -13,9 +14,50 @@ export const ContactPage: React.FC = () => {
     message: '',
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setIsSubmitting(true);
+    setErrorMessage(null);
+
+    const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
+
+    if (!accessKey || accessKey === 'YOUR_WEB3FORMS_ACCESS_KEY') {
+      // In demo mode or before key is set in .env
+      console.warn('Web3Forms Access Key is not configured yet in .env. Simulating successful submission.');
+      setTimeout(() => {
+        setIsSubmitting(false);
+        setSubmitted(true);
+      }, 700);
+      return;
+    }
+
+    try {
+      const payload = new FormData();
+      payload.append('access_key', accessKey);
+      payload.append('name', formData.fullName);
+      payload.append('email', formData.email);
+      payload.append('phone', formData.phone);
+      payload.append('subject', formData.subject || 'New Website Inquiry - Solid Bus Rental');
+      payload.append('message', formData.message);
+      payload.append('from_name', 'Solid Bus Rental Qatar');
+
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: payload,
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setSubmitted(true);
+      } else {
+        setErrorMessage(result.message || 'Failed to send message. Please try again or contact us directly.');
+      }
+    } catch {
+      setErrorMessage('Network error occurred. Please try again or reach us via phone or email.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -196,12 +238,29 @@ export const ContactPage: React.FC = () => {
                   />
                 </div>
 
+                {errorMessage && (
+                  <div className="p-3 rounded-xl bg-red-100/90 border border-red-300 text-red-800 text-xs flex items-center gap-2">
+                    <AlertCircle className="w-4 h-4 shrink-0 text-red-600" />
+                    <span>{errorMessage}</span>
+                  </div>
+                )}
+
                 <button
                   type="submit"
-                  className="w-full py-4 rounded-xl bg-[#211F1F] hover:bg-[#B87A5E] text-white font-bold text-xs uppercase tracking-wider transition-colors shadow-md flex items-center justify-center gap-2"
+                  disabled={isSubmitting}
+                  className="w-full py-4 rounded-xl bg-[#211F1F] hover:bg-[#B87A5E] disabled:opacity-60 disabled:cursor-not-allowed text-white font-bold text-xs uppercase tracking-wider transition-colors shadow-md flex items-center justify-center gap-2 cursor-pointer"
                 >
-                  <span>SEND MESSAGE</span>
-                  <Send className="w-4 h-4 text-[#D0A769]" />
+                  {isSubmitting ? (
+                    <>
+                      <span>SENDING...</span>
+                      <Loader2 className="w-4 h-4 text-[#D0A769] animate-spin" />
+                    </>
+                  ) : (
+                    <>
+                      <span>SEND MESSAGE</span>
+                      <Send className="w-4 h-4 text-[#D0A769]" />
+                    </>
+                  )}
                 </button>
 
               </form>
@@ -216,7 +275,7 @@ export const ContactPage: React.FC = () => {
                 </p>
                 <button
                   onClick={() => { setSubmitted(false); setFormData({ fullName: '', email: '', phone: '', subject: '', message: '' }); }}
-                  className="px-6 py-2.5 rounded-lg bg-[#B87A5E] text-white font-bold text-xs uppercase tracking-wider"
+                  className="px-6 py-2.5 rounded-lg bg-[#B87A5E] text-white font-bold text-xs uppercase tracking-wider cursor-pointer hover:bg-[#4A1A10] transition-colors"
                 >
                   Send Another Message
                 </button>

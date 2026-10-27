@@ -26,3 +26,8 @@ dist-ssr
 # Scratch scripts
 scratch/
 scratch_crop.js
+
+# Environment variables
+.env
+.env.*
+!.env.example
