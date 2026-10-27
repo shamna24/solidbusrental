@@ -19,11 +19,10 @@ export const ContactPage: React.FC = () => {
     setIsSubmitting(true);
     setErrorMessage(null);
 
-    const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
+    const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY || 'fd7ba6dd-a650-4a6e-899e-b347c6c0e0c0';
 
-    if (!accessKey || accessKey === 'YOUR_WEB3FORMS_ACCESS_KEY') {
-      // In demo mode or before key is set in .env
-      console.warn('Web3Forms Access Key is not configured yet in .env. Simulating successful submission.');
+    if (!accessKey) {
+      console.warn('Web3Forms Access Key is not configured. Simulating successful submission.');
       setTimeout(() => {
         setIsSubmitting(false);
         setSubmitted(true);
